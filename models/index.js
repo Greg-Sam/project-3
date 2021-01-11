@@ -1,6 +1,6 @@
 module.exports = {
   module.exports = {
-    Users: require('./Users.js')
-    Items: require('.Items.js')
+    User: require('./User.js')
+    Item: require('./Item.js')
   }
 }
