@@ -13,7 +13,10 @@ const Item = new Schema({
     Type: Number,
     required: true
   },
-  
+  image: {
+    type: String,
+    required: true
+  }
   isSold: {
     type: Boolean,
     default: false

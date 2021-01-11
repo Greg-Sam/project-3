@@ -11,6 +11,10 @@ const User = new Schema({
     required: true,
     unique: true
   },
+  password: {
+    type: String,
+    required: true
+  }
   item: [{
     type: Schema.Types.ObjectId,
     ref: 'Item'
