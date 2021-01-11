@@ -1,3 +1,6 @@
 module.exports = {
-  // your models here...
+  module.exports = {
+    Users: require('./Users.js')
+    Items: require('.Items.js')
+  }
 }
