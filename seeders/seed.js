@@ -15,27 +15,27 @@ password: 'password1234'
 
 const itemSeed = [
   {
-    itemName: "Canon EOS 90D DSLR Camera",
-      Description: 'Canon EOS 90D DSLR Camera + 18-55mm STM + 70-300mm + 30 Piece Accessory Bundle Canon EOS 90D DSLR Camera',
-    Price: 300,
+    name: "Canon EOS 90D DSLR Camera",
+      description: 'Canon EOS 90D DSLR Camera + 18-55mm STM + 70-300mm + 30 Piece Accessory Bundle Canon EOS 90D DSLR Camera',
+    price: 300,
       image:'https://live.staticflickr.com/8014/7132453187_98abce3c17_b.jpg',
     isSold: false,
       condition: 'like new',
     category:'electronics'
   },
   {
-    itemName: "Nespresso EN167B Original Espresso Machine by De'Longhi, 2.3, Black",
-      Description: 'High performance: The 19 bar pump system offers barista-style single-serve Coffee or Espresso every time, perfectly extracting the delicate flavor of each Nespresso original coffee capsule. Speed and energy saving: The fast heat- up system reaches the ideal temperature in just 25 seconds.The automatic energy saving function switches the machine off after 9 minutes of inactivity and can be extended from 9 to 30 minutes.',
-    Price: 80,
+    name: "Nespresso EN167B Original Espresso Machine by De'Longhi, 2.3, Black",
+      description: 'High performance: The 19 bar pump system offers barista-style single-serve Coffee or Espresso every time, perfectly extracting the delicate flavor of each Nespresso original coffee capsule. Speed and energy saving: The fast heat- up system reaches the ideal temperature in just 25 seconds.The automatic energy saving function switches the machine off after 9 minutes of inactivity and can be extended from 9 to 30 minutes.',
+    price: 80,
       image:'https://images-na.ssl-images-amazon.com/images/I/61u-lovQxtL._AC_SL1500_.jpg',
     isSold: false,
       condition: 'slightly used',
     category:'household',
   },
   {
-    itemName: 'Fedora with Black Trim',
-      Description:'Show off your classic sense of style with this stylish fedora',
-    Price: 10,
+    name: 'Fedora with Black Trim',
+      description:'Show off your classic sense of style with this stylish fedora',
+    price: 10,
       image: 'https://media.kohlsimg.com/is/image/kohls/4499932?wid=1200&hei=1200&op_sharpen=1',
     isSold: false,
       condition: 'like new',

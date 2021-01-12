@@ -3,12 +3,12 @@ const { Item } = require('../models')
 
 router.get('/items', (req, res) => {
   Item.find()
-    .then(hotdog => res.json(hotdog))
+    .then(items => res.json(items))
     .catch(err => console.log(err))
 })
 
 router.get('/items/latest', (req, res) => {
-  Item.find().sort({'createdAt':-1}).limit(2)
+  Item.find().sort({'createdAt':-1}).limit(5)
     .then(items => {
      res.json(items)
     })

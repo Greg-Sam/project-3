@@ -21,10 +21,10 @@ const Item = new Schema({
     default: false
   },
   condition: {
-    type: [{
+    // type: [{
       type: String,
       enum: ['still in box', 'like new', 'slightly used', 'damaged but works', 'needs some work']
-    }],
+    // }],
   },
   category: {
     type: Array
