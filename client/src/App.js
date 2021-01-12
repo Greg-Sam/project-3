@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import SignUp from './Components/SignUp/SignUp.js'
 import SignIn from './Components/SignIn/SignIn.js'
+import Home from './Components/Home/Home.js'
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -12,20 +14,6 @@ const App = () => {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/register">SignUp</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
@@ -34,6 +22,9 @@ const App = () => {
           </Route>
           <Route path="/login">
             <SignIn />
+          </Route>
+          <Route path="/">
+            <Home/>
           </Route>
         </Switch>
       </div>
