@@ -10,27 +10,29 @@ const Item = new Schema({
     required: true
   },
   Price: {
-    Type: Number,
-    required: true
+    Type: Number
   },
   image: {
     type: String,
     required: true
-  }
+  },
   isSold: {
     type: Boolean,
     default: false
-  }
+  },
   condition: {
-    type: Array
-  }
+    type: [{
+      type: String,
+      enum: ['still in box', 'like new', 'slightly used', 'damaged but works', 'needs some work']
+    }],
+  },
   category: {
     type: Array
-  }
+  },
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User'
   },
 }, { timestamps: true })
 
-module.exports = model('Item', User)
+module.exports = model('Item', Item)

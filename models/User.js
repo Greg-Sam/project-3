@@ -14,13 +14,12 @@ const User = new Schema({
   password: {
     type: String,
     required: true
-  }
-  item: [{
+  },
+  items: [{
     type: Schema.Types.ObjectId,
     ref: 'Item'
   }]
 }, { timestamps: true })
 
-User.plugin(require('passport-local-mongoose'))
 
 module.exports = model('User', User)
