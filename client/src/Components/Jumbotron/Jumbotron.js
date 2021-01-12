@@ -1,26 +1,18 @@
 import React from "react";
-import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon } from "mdbreact";
+import { MDBJumbotron, MDBContainer, MDBCol, MDBCardTitle } from "mdbreact";
 
-const JumbotronPage = () => {
+const Jumbotron = () => {
   return (
-    <MDBContainer>
-      <MDBRow>
-        <MDBCol>
-          <MDBJumbotron style={{ padding: 0 }}>
-            <MDBCol className="text-white text-center py-5 px-4 my-5" style={{ backgroundImage: `url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg)` }}>
-              <MDBCol className="py-5">
-                <MDBCardTitle className="h1-responsive pt-3 m-5 font-bold">Create your beautiful website with MDBootstrap</MDBCardTitle>
-                <p className="mx-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-                  optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!
+    <MDBContainer fluid className="pl-0 pr-0">
+      <MDBJumbotron fluid style={{ padding: 0 }}>
+        <MDBCol className="text-white text-center py-2 px-4 my-0" style={{ backgroundImage: `url(https://i.imgur.com/7m2y0zB.png)` }}>
+          <MDBCardTitle className="h1-responsive pt-3 m-4 my-0 font-bold">Basically an OfferUp clone. OfferDown.</MDBCardTitle>
+          <p className="mx-5 mb-5">Welcome to the landing page of [ WEBSITE NAME PENDING ], the easiest and quickest way to sell unneeded things of any kind and of any condition. Brought to you by the makers of Codebook.com. Create a free account and begin selling and buying today!
                 </p>
-                <MDBBtn outline color="white" className="mb-5"><MDBIcon icon="clone" className="mr-2"></MDBIcon> View project</MDBBtn>
-              </MDBCol>
-            </MDBCol>
-          </MDBJumbotron>
         </MDBCol>
-      </MDBRow>
+      </MDBJumbotron>
     </MDBContainer>
   )
 }
 
-export default JumbotronPage;
+export default Jumbotron;

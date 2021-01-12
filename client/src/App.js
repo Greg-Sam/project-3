@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
-import SignUp from './Components/SignUp/SignUp.js'
-import SignIn from './Components/SignIn/SignIn.js'
-import Home from './Components/Home/Home.js'
+import SignUp from './Components/SignUp/SignUp'
+import SignIn from './Components/SignIn/SignIn'
+import Jumbotron from './Components/Jumbotron/Jumbotron'
+import Navbar from './Components/Navbar/Navbar'
+import Home from './Home'
+
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -14,8 +17,6 @@ const App = () => {
   return (
     <Router>
       <div>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/register">
             <SignUp />
