@@ -3,7 +3,8 @@ import SignUp from './Components/SignUp/SignUp'
 import SignIn from './Components/SignIn/SignIn'
 import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
-import Home from './Home'
+import Home from './Pages/Home'
+import NewPost from './Pages/NewPost'
 
 import React from "react";
 import {
@@ -21,11 +22,17 @@ const App = () => {
           <Route path="/register">
             <SignUp />
           </Route>
+
           <Route path="/login">
             <SignIn />
           </Route>
-          <Route path="/">
+
+          <Route path="/home">
             <Home/>
+          </Route>
+
+          <Route path="/sell">
+            <NewPost />
           </Route>
         </Switch>
       </div>
