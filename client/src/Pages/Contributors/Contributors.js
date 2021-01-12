@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBTypography, MDBIcon, MDBBtn, MDBLink } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBLink } from "mdbreact";
 import './App.css' //Import here your file style
 
 const Contributors = () => {
