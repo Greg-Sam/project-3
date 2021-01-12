@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBLink } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn } from "mdbreact";
 import './App.css' //Import here your file style
 
 const Contributors = () => {
@@ -12,7 +12,7 @@ const Contributors = () => {
          <hr></hr>
           <h4>Amee Parmar</h4>
           <hr></hr>
-          <MDBBtn outline rounded size="sm"><MDBIcon fab icon="github" /></MDBBtn> 
+          <MDBBtn outline rounded size="sm"><a href="https://github.com/amee05"><MDBIcon fab icon="github" /></a></MDBBtn> 
            <MDBBtn outline rounded size="sm"><MDBIcon fab icon="linkedin" /></MDBBtn>
           {/* <MDBIcon fab icon="github" /> <MDBIcon fab icon="linkedin" /> */}
           <hr></hr>
@@ -25,7 +25,7 @@ const Contributors = () => {
           <hr></hr>
           <h4>Greg Samuelson</h4>
           <hr></hr>
-          <MDBIcon fab icon="github" /> <MDBIcon fab icon="linkedin" />
+          <a href="https://github.com/Greg-Sam"><MDBIcon fab icon="github" size="2x" /></a><a href="https://www.linkedin.com/in/greg-samuelson/"> <MDBIcon fab icon="linkedin" size="2x" /></a>
           <hr></hr>
           <h6>Greg is an aspiring full-stack developer with experience in education, project management and international development
                 work. He loves coming up with new ideas and then figuring out how to make them a reality.</h6>
