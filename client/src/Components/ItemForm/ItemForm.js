@@ -5,7 +5,6 @@ import {
   MDBCol,
   MDBCard,
   MDBCardBody,
-  MDBModalFooter,
   MDBIcon,
   MDBCardHeader,
   MDBBtn,
@@ -43,6 +42,12 @@ const ItemForm = () => {
                     label="Category"
                     icon="folder-open"
                     group
+                  />
+
+                  <MDBInput
+                    type="textarea"
+                    label="Description"
+                    outline
                   />
 
                   <MDBInput
