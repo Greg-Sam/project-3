@@ -7,6 +7,14 @@ router.get('/items', (req, res) => {
     .catch(err => console.log(err))
 })
 
+router.get('/items/latest', (req, res) => {
+  Item.find().sort({'createdAt':-1}).limit(2)
+    .then(items => {
+     res.json(items)
+    })
+    .catch(err => console.log(err))
+})
+
 router.get('/items/:id', (req, res) => {
   Item.findById(req.params.id)
     .then(item => res.json(item))
