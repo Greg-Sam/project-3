@@ -4,6 +4,7 @@ import SignIn from './Components/SignIn/SignIn'
 import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Home'
+import Contributors from './Pages/Contributors'
 
 import React from "react";
 import {
@@ -24,8 +25,11 @@ const App = () => {
           <Route path="/login">
             <SignIn />
           </Route>
-          <Route path="/">
+          <Route path="/Home">
             <Home/>
+          </Route>
+          <Route path= "/Contributors">
+            <Contributors />
           </Route>
         </Switch>
       </div>
