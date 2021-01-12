@@ -1,15 +1,8 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "proxy": "http://localhost:3001",
-  "dependencies": {
-    "concurrently": "^5.3.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "if-env": "^1.0.4",
-    "mongoose": "^5.11.10"
-  },
+  "name": "project3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -22,5 +15,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mdbreact": "^5.0.1",
+    "mongoose": "^5.11.10"
+  }
 }
