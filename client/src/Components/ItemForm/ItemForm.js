@@ -12,7 +12,7 @@ import {
   MDBFormInline
 } from "mdbreact";
 
-const ItemForm = () => {
+const ItemForm = (props) => {
   return (
     <MDBContainer>
       <MDBRow>
@@ -30,30 +30,45 @@ const ItemForm = () => {
                     label="Item name"
                     icon="frog"
                     group
+                    name="name"
+                    value={props.name}
+                    onChange={props.handleInputChange}
                   />
 
                   <MDBInput
                     label="Price"
                     icon="money-bill-alt"
                     group
+                    name="price"
+                    value={props.price}
+                    onChange={props.handleInputChange}
                   />
 
                   <MDBInput
                     label="Category"
                     icon="folder-open"
                     group
+                    name="category"
+                    value={props.category}
+                    onChange={props.handleInputChange}
                   />
 
                   <MDBInput
-                    type="textarea"
                     label="Description"
+                    type="textarea"
                     outline
+                    name="description"
+                    value={props.description}
+                    onChange={props.handleInputChange}
                   />
 
                   <MDBInput
                     label="Condition"
                     icon="medkit"
                     group
+                    name="condition"
+                    value={props.condition}
+                    onChange={props.handleInputChange}
                   />
 
                   <div>
@@ -90,12 +105,18 @@ const ItemForm = () => {
                     label="(Development) Image link"
                     icon="medkit"
                     group
+                    name="image"
+                    value={props.image}
+                    onChange={props.handleInputChange}
                   />
 
                   <MDBInput
                     label="(Development) User ID"
                     icon="medkit"
                     group
+                    name="_id"
+                    value={props._id}
+                    onChange={props.handleInputChange}
                   />
                   
                 </div>
@@ -105,6 +126,7 @@ const ItemForm = () => {
                     color="light-blue"
                     className="mb-3"
                     type="submit"
+                    onClick={(event) => props.postItem(event)}
                   >
                     Create listing
                 </MDBBtn>
