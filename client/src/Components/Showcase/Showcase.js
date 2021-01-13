@@ -62,7 +62,7 @@ const Showcase = () => {
             <MDBCol lg="2" md="6" className="mb-lg-0 mb-4">
               <MDBCard className="align-items-center elegant-color">
                 <MDBCardImage
-                  src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2020/10/samsung-galaxy-s20-fe-1601983375.jpg"
+                  src={itemState.items[itemState.items.length - 2].image}
                   top
                   alt="sample photo"
                   overlay="white-slight"
@@ -70,17 +70,17 @@ const Showcase = () => {
                 />
                 <MDBCardBody className="elegant-color text-center">
                   <a href="#!" className="grey-text">
-                    <h5>Electronics</h5>
+                    <h5>{itemState.items[itemState.items.length - 2].category}</h5>
                   </a>
                   <h5>
                     <strong>
                       <a href="#!" className="white-text">
-                        Samsung Galaxy S20{" "}
+                        {itemState.items[itemState.items.length - 2].name}{" "}
                       </a>
                     </strong>
                   </h5>
                   <h4 className="font-weight-bold amber-text">
-                    <strong>$400</strong>
+                    <strong>${itemState.items[itemState.items.length - 2].price}</strong>
                   </h4>
                 </MDBCardBody>
               </MDBCard>
@@ -89,7 +89,7 @@ const Showcase = () => {
             <MDBCol lg="2" md="6" className="mb-lg-0 mb-4">
               <MDBCard className="align-items-center elegant-color">
                 <MDBCardImage
-                  src="https://www.thetruthaboutcars.com/wp-content/uploads/2014/06/photo-32.jpg"
+                  src={itemState.items[itemState.items.length - 3].image}
                   top
                   alt="sample photo"
                   overlay="white-slight"
@@ -97,17 +97,17 @@ const Showcase = () => {
                 />
                 <MDBCardBody className="elegant-color text-center">
                   <a href="#!" className="grey-text">
-                    <h5>Automotive</h5>
+                    <h5>{itemState.items[itemState.items.length - 3].category}</h5>
                   </a>
                   <h5>
                     <strong>
                       <a href="#!" className="white-text">
-                        2002 Honda S2000{" "}
+                        {itemState.items[itemState.items.length - 3].name}{" "}
                       </a>
                     </strong>
                   </h5>
                   <h4 className="font-weight-bold amber-text">
-                    <strong>$15000</strong>
+                    <strong>${itemState.items[itemState.items.length - 3].price}</strong>
                   </h4>
                 </MDBCardBody>
               </MDBCard>
@@ -116,7 +116,7 @@ const Showcase = () => {
             <MDBCol lg="2" md="6" className="mb-lg-0 mb-4">
               <MDBCard className="align-items-center elegant-color">
                 <MDBCardImage
-                  src="https://media.karousell.com/media/photos/products/2019/09/02/wmns_air_jordan_1_satin_black_toe_us_9_1567438999_03d3757a_progressive.jpg"
+                  src={itemState.items[itemState.items.length - 4].image}
                   top
                   alt="sample photo"
                   overlay="white-slight"
@@ -124,17 +124,17 @@ const Showcase = () => {
                 />
                 <MDBCardBody className="elegant-color text-center">
                   <a href="#!" className="grey-text">
-                    <h5>Clothing</h5>
+                    <h5>{itemState.items[itemState.items.length - 4].category}</h5>
                   </a>
                   <h5>
                     <strong>
                       <a href="#!" className="white-text">
-                        Nike Air Jordan 1{" "}
+                        {itemState.items[itemState.items.length - 4].name}{" "}
                       </a>
                     </strong>
                   </h5>
                   <h4 className="font-weight-bold amber-text">
-                    <strong>$350</strong>
+                    <strong>${itemState.items[itemState.items.length - 4].price}</strong>
                   </h4>
                 </MDBCardBody>
               </MDBCard>
@@ -143,7 +143,7 @@ const Showcase = () => {
             <MDBCol lg="2" md="6" className="mb-lg-0 mb-4">
               <MDBCard className="align-items-center elegant-color">
                 <MDBCardImage
-                  src="https://i.redd.it/fqrr9q5kcaa51.jpg"
+                  src={itemState.items[itemState.items.length - 5].image}
                   top
                   alt="sample photo"
                   overlay="white-slight"
@@ -151,17 +151,17 @@ const Showcase = () => {
                 />
                 <MDBCardBody className="elegant-color text-center">
                   <a href="#!" className="grey-text">
-                    <h5>Pets</h5>
+                    <h5>{itemState.items[itemState.items.length - 5].category}</h5>
                   </a>
                   <h5>
                     <strong>
                       <a href="#!" className="white-text">
-                        Hedgehog food{" "}
+                        {itemState.items[itemState.items.length - 5].name}{" "}
                       </a>
                     </strong>
                   </h5>
                   <h4 className="font-weight-bold amber-text">
-                    <strong>$9</strong>
+                    <strong>${itemState.items[itemState.items.length - 5].price}</strong>
                   </h4>
                 </MDBCardBody>
               </MDBCard>
@@ -170,7 +170,7 @@ const Showcase = () => {
             <MDBCol lg="2" md="6" className="mb-lg-0 mb-4">
               <MDBCard className="align-items-center elegant-color">
                 <MDBCardImage
-                  src="https://i.pinimg.com/474x/83/d6/fc/83d6fc7f2f943bb10d04f322fe0e5844.jpg"
+                  src={itemState.items[itemState.items.length - 6].image}
                   top
                   alt="sample photo"
                   overlay="white-slight"
@@ -178,17 +178,17 @@ const Showcase = () => {
                 />
                 <MDBCardBody className="elegant-color text-center">
                   <a href="#!" className="grey-text">
-                    <h5>Electronics</h5>
+                    <h5>{itemState.items[itemState.items.length - 6].category}</h5>
                   </a>
                   <h5>
                     <strong>
                       <a href="#!" className="white-text">
-                        Custom gaming PC{" "}
+                        {itemState.items[itemState.items.length - 6].name}{" "}
                       </a>
                     </strong>
                   </h5>
                   <h4 className="font-weight-bold amber-text">
-                    <strong>$1200</strong>
+                    <strong>${itemState.items[itemState.items.length - 6].price}</strong>
                   </h4>
                 </MDBCardBody>
               </MDBCard>
