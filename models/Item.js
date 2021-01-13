@@ -26,7 +26,7 @@ const Item = new Schema({
   },
   category: {
     type: String,
-    enum: ['Electronics', 'Automotive', 'Household', 'Pet', 'Clothing']
+    enum: ['Electronics', 'Automotive', 'Household', 'Pets', 'Clothing']
   },
   user: {
     type: Schema.Types.ObjectId,
