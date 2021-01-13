@@ -83,7 +83,7 @@ const Contributors = () => {
         </MDBCol>
         </MDBRow>
     </MDBContainer>
-  );
+  )
 }
 
 export default Contributors;
