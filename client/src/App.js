@@ -36,7 +36,7 @@ const App = () => {
             <NewPost />
           </Route>
           <Route path="/contributors">
-            <NewPost />
+            <Contributors />
           </Route>
         </Switch>
       </div>
