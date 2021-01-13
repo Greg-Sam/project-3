@@ -12,9 +12,7 @@ const Contributors = () => {
          <hr></hr>
           <h4>Amee Parmar</h4>
           <hr></hr>
-          <MDBBtn outline rounded size="sm"><a href="https://github.com/amee05"><MDBIcon fab icon="github" /></a></MDBBtn> 
-           <MDBBtn outline rounded size="sm"><MDBIcon fab icon="linkedin" /></MDBBtn>
-          {/* <MDBIcon fab icon="github" /> <MDBIcon fab icon="linkedin" /> */}
+          <a href="https://github.com/amee05"><MDBIcon fab icon="github" size="2x" /></a><a href="https://www.linkedin.com/in/amee-parmar-5b30a526/?trk=profile-badge-cta"> <MDBIcon fab icon="linkedin" size="2x" /></a><a href="mailto:amee05@yahoo.com"><MDBIcon icon="at" size="2x" /></a>
           <hr></hr>
           <h6>JavaScript, Node.js, SQL developer. Can speak three languages and has been to ten countries..Loking forward to visit many more. If I am not coding then I am reading.</h6>
         </MDBCol>
@@ -25,7 +23,7 @@ const Contributors = () => {
           <hr></hr>
           <h4>Greg Samuelson</h4>
           <hr></hr>
-          <a href="https://github.com/Greg-Sam"><MDBIcon fab icon="github" size="2x" /></a><a href="https://www.linkedin.com/in/greg-samuelson/"> <MDBIcon fab icon="linkedin" size="2x" /></a>
+          <a href="mailto:grssam@gmail.com"><MDBIcon far icon="envelope" size="2x" /></a><a href="https://github.com/Greg-Sam"><MDBIcon fab icon="github" size="2x" /></a><a href="https://www.linkedin.com/in/greg-samuelson/"> <MDBIcon fab icon="linkedin" size="2x" /></a>
           <hr></hr>
           <h6>Greg is an aspiring full-stack developer with experience in education, project management and international development
                 work. He loves coming up with new ideas and then figuring out how to make them a reality.</h6>
@@ -39,7 +37,7 @@ const Contributors = () => {
           <h4>Kyle Lorenzo</h4>
           <hr></hr>
          
-          <MDBIcon fab icon="github" /> <MDBIcon fab icon="linkedin" />
+          <a href="https://github.com/ky-lore"><MDBIcon fab icon="github" size="2x" /></a><a href="https://www.linkedin.com/in/kyle-lorenzo-46a246161/"> <MDBIcon fab icon="linkedin" size="2x" /></a>
           <hr></hr>
           <h6>Vanilla JS, Node.JS, MySQL, Java developer. Fantasy football failure. Shameless shoujo-manga reader. Go Rams. UCI Coding
                 Bootcamp certification in progress.</h6>
@@ -52,7 +50,7 @@ const Contributors = () => {
             <hr></hr>
           <h4>Joseph Wong Ludwicak</h4>
           <hr></hr>
-          <MDBIcon fab icon="github" /> <MDBIcon fab icon="linkedin" />
+          <a href="https://github.com/Josclud"><MDBIcon fab icon="github" size="2x" /></a><a href="https://www.linkedin.com/in/joseph-wong-ludwicak/"> <MDBIcon fab icon="linkedin" size="2x" /></a>
           <hr></hr>
           <h6>Hi, Im Joseph and I am currently working towards a career as a full-stack web developer. Checkout my Linkedin and Github
                 to learn more about me and projects</h6>
@@ -65,7 +63,7 @@ const Contributors = () => {
           <hr></hr>
           <h4>Wettim Linton</h4>
           <hr></hr>
-          <MDBIcon fab icon="github" /> <MDBIcon fab icon="linkedin" />
+          <a href="https://github.com/wlinton1"><MDBIcon fab icon="github" size="2x" /></a><a href="https://www.linkedin.com/in/wettim-linton-54b4421a6/"> <MDBIcon fab icon="linkedin" size="2x" /></a>
           <hr></hr>
           <h6>I'm currently enrolled in the UCI Full Stack Coding Bootcamp. I'm looking forward to
           learning all there is to know about web development in order to create fantastic websites. We are 7 weeks in and
