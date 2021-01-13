@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home'
 import NewPost from './Pages/NewPost'
 import Contributors from './Pages/Contributors'
+import DisplayItem from './Pages/DisplayItem'
 
 import React from "react";
 import {
@@ -14,6 +15,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 
 const App = () => {
   return (
@@ -35,9 +37,15 @@ const App = () => {
           <Route path="/sell">
             <NewPost />
           </Route>
+
           <Route path="/contributors">
             <Contributors />
           </Route>
+
+          <Route path="/displayItem">
+            <DisplayItem />
+          </Route>
+
         </Switch>
       </div>
     </Router>
