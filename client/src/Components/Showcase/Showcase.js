@@ -1,14 +1,21 @@
 import React from "react";
+import Axios from 'axios'
 import { MDBRow, MDBCol, MDBCard, MDBCardImage, MDBCardBody } from "mdbreact";
 
 const Showcase = () => {
+  Axios.get('/api/items')
+    .then(({ data }) => {
+      console.log(data)
+    })
+    .catch(err => console.log(err))
+
   return (
     <section className="text-center my-5">
       <h2 className="white-text h1-responsive font-weight-bold text-center my-2">
         Recent listings
       </h2>
       <p className="grey-text text-center w-responsive mx-auto mb-5">
-        View the most recent listings in real-time!
+        View the most recent listings!
       </p>
       <MDBRow className="mr-0 ml-0 pl-5 pr-5">
         <MDBCol lg="2" md="6" className="mb-lg-0 mb-4">

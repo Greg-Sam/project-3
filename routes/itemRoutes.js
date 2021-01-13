@@ -8,7 +8,7 @@ router.get('/items', (req, res) => {
 })
 
 router.get('/items/latest', (req, res) => {
-  Item.find().sort({'createdAt':-1}).limit(2)
+  Item.find().sort({'createdAt':-1}).limit(5)
     .then(items => {
      res.json(items)
     })
