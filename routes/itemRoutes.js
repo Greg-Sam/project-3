@@ -8,10 +8,16 @@ router.get('/items', (req, res) => {
 })
 
 router.get('/items/latest', (req, res) => {
-  Item.find().sort({'createdAt':-1}).limit(5)
+  Item.find().sort({'createdAt':-1}).limit(2)
     .then(items => {
      res.json(items)
     })
+    .catch(err => console.log(err))
+})
+
+router.get('/items/:category', (req, res) => {
+  Item.find({'category': req.params.category})
+    .then(item => res.json(item))
     .catch(err => console.log(err))
 })
 
