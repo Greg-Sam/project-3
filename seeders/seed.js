@@ -21,7 +21,7 @@ const itemSeed = [
       image:'https://live.staticflickr.com/8014/7132453187_98abce3c17_b.jpg',
     isSold: false,
     condition: 'New—open box',
-    category:'Electronics'
+    category:'Electronics',
   },
   {
     name: "Nespresso EN167B Original Espresso Machine by De'Longhi, 2.3, Black",
