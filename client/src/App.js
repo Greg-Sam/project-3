@@ -3,7 +3,8 @@ import SignUp from './Components/SignUp/SignUp'
 import SignIn from './Components/SignIn/SignIn'
 import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
-import Home from './Home'
+import Home from './Pages/Home'
+import NewPost from './Pages/NewPost'
 import Contributors from './Pages/Contributors'
 
 import React from "react";
@@ -22,14 +23,20 @@ const App = () => {
           <Route path="/register">
             <SignUp />
           </Route>
+
           <Route path="/login">
             <SignIn />
           </Route>
-          <Route path="/Home">
+
+          <Route path="/home">
             <Home/>
           </Route>
-          <Route path= "/Contributors">
-            <Contributors />
+
+          <Route path="/sell">
+            <NewPost />
+          </Route>
+          <Route path="/contributors">
+            <NewPost />
           </Route>
         </Switch>
       </div>

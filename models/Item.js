@@ -1,15 +1,15 @@
 const { model, Schema } = require('mongoose')
 
 const Item = new Schema({
-  itemName: 
-  {type: String,
-    required: true
-  },
-  Description: {
+  name: {
     type: String,
     required: true
   },
-  Price: {
+  description: {
+    type: String,
+    required: true
+  },
+  price: {
     Type: Number
   },
   image: {
