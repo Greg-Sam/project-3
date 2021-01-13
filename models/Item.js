@@ -21,13 +21,12 @@ const Item = new Schema({
     default: false
   },
   condition: {
-    // type: [{
       type: String,
-      enum: ['still in box', 'like new', 'slightly used', 'damaged but works', 'needs some work']
-    // }],
+    enum: ['New', 'New—open box', 'Used-good condition', 'Used-some wear and tear']
   },
   category: {
-    type: Array
+    type: String,
+    enum: ['Electronics', 'Automotive', 'Household', 'Pet', 'Clothing']
   },
   user: {
     type: Schema.Types.ObjectId,

@@ -20,8 +20,8 @@ const itemSeed = [
     price: 300,
       image:'https://live.staticflickr.com/8014/7132453187_98abce3c17_b.jpg',
     isSold: false,
-      condition: 'like new',
-    category:'electronics'
+    condition: 'New—open box',
+    category:'Electronics'
   },
   {
     name: "Nespresso EN167B Original Espresso Machine by De'Longhi, 2.3, Black",
@@ -29,8 +29,8 @@ const itemSeed = [
     price: 80,
       image:'https://images-na.ssl-images-amazon.com/images/I/61u-lovQxtL._AC_SL1500_.jpg',
     isSold: false,
-      condition: 'slightly used',
-    category:'household',
+    condition: 'Used-good condition',
+    category:'Household',
   },
   {
     name: 'Fedora with Black Trim',
@@ -38,8 +38,8 @@ const itemSeed = [
     price: 10,
       image: 'https://media.kohlsimg.com/is/image/kohls/4499932?wid=1200&hei=1200&op_sharpen=1',
     isSold: false,
-      condition: 'like new',
-    category: 'clothing'
+    condition: 'Used-good condition',
+    category: 'Clothing'
   }
 ]
 
