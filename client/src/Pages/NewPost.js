@@ -11,7 +11,6 @@ export default function NewPost() {
     price: '',
     category: '',
     condition: '',
-    // _id: '',
     image: ''
   })
 
@@ -23,12 +22,10 @@ export default function NewPost() {
       price: inputState.price,
       category: inputState.category,
       condition: inputState.condition,
-      // _id: inputState._id,
       image: inputState.image
     }
     let items = Item.createItem(itemObject)
     console.log(items)
-    // console.log(inputState)
   }
   
   inputState.handleInputChange = (event) => {
@@ -46,7 +43,6 @@ export default function NewPost() {
         category={inputState.category}
         description={inputState.description}
         condition={inputState.condition}
-        // id={inputState._id}
         image={inputState.image}
       />
     </div>

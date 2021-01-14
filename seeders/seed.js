@@ -21,7 +21,7 @@ const itemSeed = [
       image:'https://live.staticflickr.com/8014/7132453187_98abce3c17_b.jpg',
     isSold: false,
     condition: 'New—open box',
-    category:'Electronics'
+    category:'Electronics',
   },
   {
     name: "Nespresso EN167B Original Espresso Machine by De'Longhi, 2.3, Black",
@@ -40,6 +40,60 @@ const itemSeed = [
     isSold: false,
     condition: 'Used-good condition',
     category: 'Clothing'
+  },
+  {
+    name: 'Denim shirt',
+    description: 'Comfortable shirt for every occasion.',
+    price: 60,
+    image: 'https://i.ebayimg.com/images/g/Ef8AAOSwZRNfF1i8/s-l300.jpg',
+    isSold: false,
+    condition: 'New',
+    category: 'Clothing'
+  },
+  {
+    name: 'Samsung Galaxy S20',
+    description: 'Never used. Unlocked for any service provider.',
+    price: 400,
+    image: 'https://resize.indiatvnews.com/en/resize/newbucket/715_-/2020/10/samsung-galaxy-s20-fe-1601983375.jpg',
+    isSold: false,
+    condition: 'New—open box',
+    category: 'Electronics'
+  },
+  {
+    name: '2002 Honda S2000',
+    description: 'Perfect commuter car. New tires.',
+    price: 15000,
+    image: 'https://www.thetruthaboutcars.com/wp-content/uploads/2014/06/photo-32.jpg',
+    isSold: false,
+    condition: 'New—open box',
+    category: 'Automotive'
+  },
+  {
+    name: 'Nike Air Jordan 1',
+    description: 'The one and only Air Jordan 1 series.  Perfect condition, never been worn outside of my bedroom.',
+    price: 350,
+    image: 'https://media.karousell.com/media/photos/products/2019/09/02/wmns_air_jordan_1_satin_black_toe_us_9_1567438999_03d3757a_progressive.jpg',
+    isSold: false,
+    condition: 'New',
+    category: 'Clothing'
+  },
+  {
+    name: 'Hedgehog food',
+    description: 'USDA Certified safe pet food. Your hedgehog deserves the very best.',
+    price: 9,
+    image: 'https://i.redd.it/fqrr9q5kcaa51.jpg',
+    isSold: false,
+    condition: 'New',
+    category: 'Pets'
+  },
+  {
+    name: 'Custom gaming PC',
+    description: 'Everything you need at a great price.',
+    price: 1200,
+    image: 'https://i.pinimg.com/474x/83/d6/fc/83d6fc7f2f943bb10d04f322fe0e5844.jpg',
+    isSold: false,
+    condition: 'Used-good condition',
+    category: 'Electronics'
   }
 ]
 
