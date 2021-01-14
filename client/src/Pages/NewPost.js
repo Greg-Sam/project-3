@@ -26,7 +26,6 @@ export default function NewPost() {
     }
     let items = Item.createItem(itemObject)
     console.log(items)
-    // console.log(inputState)
   }
   
   inputState.handleInputChange = (event) => {
