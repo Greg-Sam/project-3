@@ -34,4 +34,18 @@ const Item = new Schema({
   },
 }, { timestamps: true })
 
+Item.index({
+  name: 'text',
+  description: 'text',
+  category: 'text',
+  condition: 'text'
+}, {
+  weights: {
+    name: 5,
+    description: 1,
+    category: 1,
+    condition: 1
+  },
+});
+
 module.exports = model('Item', Item)

@@ -21,6 +21,12 @@ router.get('/items/:category', (req, res) => {
     .catch(err => console.log(err))
 })
 
+router.get('/items/search/:term', (req, res) => {
+  Item.find({ $text: { $search: req.params.term } })
+    .then(item => res.json(item))
+    .catch(err => console.log(err))
+})
+
 router.get('/items/:id', (req, res) => {
   Item.findById(req.params.id)
     .then(item => res.json(item))
