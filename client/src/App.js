@@ -5,6 +5,11 @@ import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home'
 import NewPost from './Pages/NewPost'
+import Electronics from './Pages/Electronics'
+import Automotive from './Pages/Automotive'
+import Household from './Pages/Automotive'
+import Pets from './Pages/Pets'
+import Clothing from './Pages/Clothing'
 
 import React from "react";
 import {
@@ -33,6 +38,26 @@ const App = () => {
 
           <Route path="/sell">
             <NewPost />
+          </Route>
+
+          <Route path="/electronics">
+            <Electronics />
+          </Route>
+
+          <Route path="/automotive">
+            <Automotive />
+          </Route>
+
+          <Route path="/pets">
+            <Pets />
+          </Route>
+
+          <Route path="/clothing">
+            <Clothing />
+          </Route>
+
+          <Route path="/household">
+            <Household />
           </Route>
         </Switch>
       </div>
