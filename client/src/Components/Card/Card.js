@@ -1,22 +1,23 @@
 import React from 'react';
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
 
-const CardExample = () => {
+const Card = props => {
   return (
     <MDBCol>
       <MDBCard style={{ width: "22rem" }}>
-        <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
+        <MDBCardImage className="img-fluid" src={props.image} waves />
         <MDBCardBody>
-          <MDBCardTitle>Card title</MDBCardTitle>
+          <MDBCardTitle>{props.name}</MDBCardTitle>
           <MDBCardText>
-            Some quick example text to build on the card title and make
-            up the bulk of the card&apos;s content.
+            {props.catagory}
+            {props.description}
+            {props.condition}
           </MDBCardText>
-          <MDBBtn href="#">MDBBtn</MDBBtn>
+          <MDBBtn href="#">Buy</MDBBtn>
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
   )
 }
 
-export default CardExample;
+export default Card;
