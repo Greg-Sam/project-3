@@ -4,7 +4,7 @@ import { MDBCol, MDBCard, MDBCardImage, MDBCardBody } from "mdbreact";
 export default function Card(props) {
   return (
     <MDBCol lg="2" md="6" className="mb-lg-0 mb-4">
-      <MDBCard className="align-items-center elegant-color">
+      <MDBCard className="align-items-center elegant-color" id={props.id}>
         <MDBCardImage
           src={props.image}
           top
@@ -18,7 +18,7 @@ export default function Card(props) {
           </a>
           <h5>
             <strong>
-              <a href="#!" className="white-text">
+              <a href="#!" className="white-text" id={props.id}>
                 {props.name}{" "}
               </a>
             </strong>
