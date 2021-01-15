@@ -5,6 +5,8 @@ import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home'
 import NewPost from './Pages/NewPost'
+import Contributors from './Pages/Contributors'
+import DisplayItem from './Pages/DisplayItem'
 import Electronics from './Pages/Electronics'
 import Automotive from './Pages/Automotive'
 import Household from './Pages/Automotive'
@@ -18,6 +20,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 
 const App = () => {
   return (
@@ -38,6 +41,14 @@ const App = () => {
 
           <Route path="/sell">
             <NewPost />
+          </Route>
+
+          <Route path="/contributors">
+            <Contributors />
+          </Route>
+
+          <Route path="/displayItem">
+            <DisplayItem />
           </Route>
 
           <Route path="/electronics">

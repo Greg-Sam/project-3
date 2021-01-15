@@ -4,39 +4,41 @@ const userSeed = [
   {
     userName: 'user1',
     email: 'user1@gmail.com',
-password: 'password1234'
+    password: 'password1234',
+    image: 'https://img.favpng.com/11/1/19/computer-icons-user-profile-clip-art-png-favpng-5PNKaN9pyb0YVbv53YJy99Bi2.jpg'
   },
-{
-  userName: 'user2',
+  {
+    userName: 'user2',
     email: 'user2@gmail.com',
-  password: 'password1234'
-}
+    password: 'password1234',
+    image: 'https://img.favpng.com/11/1/19/computer-icons-user-profile-clip-art-png-favpng-5PNKaN9pyb0YVbv53YJy99Bi2.jpg'
+  }
 ]
 
 const itemSeed = [
   {
     name: "Canon EOS 90D DSLR Camera",
-      description: 'Canon EOS 90D DSLR Camera + 18-55mm STM + 70-300mm + 30 Piece Accessory Bundle Canon EOS 90D DSLR Camera',
+    description: 'Canon EOS 90D DSLR Camera + 18-55mm STM + 70-300mm + 30 Piece Accessory Bundle Canon EOS 90D DSLR Camera',
     price: 300,
-      image:'https://live.staticflickr.com/8014/7132453187_98abce3c17_b.jpg',
+    image: 'https://live.staticflickr.com/8014/7132453187_98abce3c17_b.jpg',
     isSold: false,
     condition: 'New—open box',
-    category:'Electronics',
+    category: 'Electronics'
   },
   {
     name: "Nespresso EN167B Original Espresso Machine by De'Longhi, 2.3, Black",
-      description: 'High performance: The 19 bar pump system offers barista-style single-serve Coffee or Espresso every time, perfectly extracting the delicate flavor of each Nespresso original coffee capsule. Speed and energy saving: The fast heat- up system reaches the ideal temperature in just 25 seconds.The automatic energy saving function switches the machine off after 9 minutes of inactivity and can be extended from 9 to 30 minutes.',
+    description: 'High performance: The 19 bar pump system offers barista-style single-serve Coffee or Espresso every time, perfectly extracting the delicate flavor of each Nespresso original coffee capsule. Speed and energy saving: The fast heat- up system reaches the ideal temperature in just 25 seconds.The automatic energy saving function switches the machine off after 9 minutes of inactivity and can be extended from 9 to 30 minutes.',
     price: 80,
-      image:'https://images-na.ssl-images-amazon.com/images/I/61u-lovQxtL._AC_SL1500_.jpg',
+    image: 'https://images-na.ssl-images-amazon.com/images/I/61u-lovQxtL._AC_SL1500_.jpg',
     isSold: false,
     condition: 'Used-good condition',
-    category:'Household',
+    category: 'Household',
   },
   {
     name: 'Fedora with Black Trim',
-      description:'Show off your classic sense of style with this stylish fedora',
+    description: 'Show off your classic sense of style with this stylish fedora',
     price: 10,
-      image: 'https://media.kohlsimg.com/is/image/kohls/4499932?wid=1200&hei=1200&op_sharpen=1',
+    image: 'https://media.kohlsimg.com/is/image/kohls/4499932?wid=1200&hei=1200&op_sharpen=1',
     isSold: false,
     condition: 'Used-good condition',
     category: 'Clothing'
@@ -65,7 +67,7 @@ const itemSeed = [
     price: 15000,
     image: 'https://www.thetruthaboutcars.com/wp-content/uploads/2014/06/photo-32.jpg',
     isSold: false,
-    condition: 'New—open box',
+    condition: 'Used-good condition',
     category: 'Automotive'
   },
   {
