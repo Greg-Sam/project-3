@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
-import SignUp from './Components/SignUp/SignUp'
-import SignIn from './Components/SignIn/SignIn'
+// 
+import Register from './Pages/Register/Register'
+import LogIn from './Pages/LogIn/LogIn'
 import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home'
@@ -28,11 +29,11 @@ const App = () => {
       <div>
         <Switch>
           <Route path="/register">
-            <SignUp />
+            <Register />
           </Route>
 
           <Route path="/login">
-            <SignIn />
+            <LogIn />
           </Route>
 
           <Route exact path="/">
