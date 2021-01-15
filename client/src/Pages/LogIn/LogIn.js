@@ -1,4 +1,5 @@
 import React from 'react';
+import User from '../../utils/UserAPI/UserAPI'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -10,6 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
+import { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
@@ -47,6 +49,27 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function LogIn() {
+
+  const [inputState, setInputState] = useState({
+    username: '',
+    password: ''
+  })
+
+  inputState.postUser = async (event) => {
+    event.preventDefault()
+    console.log('ping')
+    let userObject = {
+      username: inputState.username,
+      password: inputState.password
+    }
+    let users = await User.loginUser(userObject)
+    console.log(users)
+  }
+
+  inputState.handleInputChange = (event) => {
+    setInputState({ ...inputState, [event.target.name]: event.target.value })
+  }
+
   const classes = useStyles();
 
   return (
@@ -65,10 +88,12 @@ export default function LogIn() {
             margin="normal"
             required
             fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
+            value={inputState.username}
+            onChange={inputState.handleInputChange}
+            id="username"
+            label="username"
+            name="username"
+            autoComplete="username"
             autoFocus
           />
           <TextField
@@ -76,6 +101,8 @@ export default function LogIn() {
             margin="normal"
             required
             fullWidth
+            value={inputState.email}
+            onChange={inputState.handleInputChange}
             name="password"
             label="Password"
             type="password"
