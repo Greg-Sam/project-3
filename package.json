@@ -22,7 +22,11 @@
     "express": "^4.17.1",
     "firebase": "^8.2.2",
     "if-env": "^1.0.4",
-    "mdbreact": "^5.0.1",
-    "mongoose": "^5.11.10"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.12",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0"
   }
 }

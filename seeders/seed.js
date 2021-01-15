@@ -2,12 +2,14 @@ const { User, Item } = require('../models')
 
 const userSeed = [
   {
+    name: 'user1'
     userName: 'user1',
     email: 'user1@gmail.com',
     password: 'password1234',
     image: 'https://img.favpng.com/11/1/19/computer-icons-user-profile-clip-art-png-favpng-5PNKaN9pyb0YVbv53YJy99Bi2.jpg'
   },
   {
+    name: 'user2'
     userName: 'user2',
     email: 'user2@gmail.com',
     password: 'password1234',
