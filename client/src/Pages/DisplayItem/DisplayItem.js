@@ -10,26 +10,26 @@ const {
   getItems
 } = Item
 
-const DisplayItem = id => {
+const DisplayItem = (props) => {
   const [itemState, setItemState] = useState({
     isLoaded: false,
     items: []
   })
 
   useEffect(async () => {
-    let { data: item } = await getItems('Automotive')
+    let { data: item } = await getItems()
     setItemState({ ...itemState, isLoaded: true })
     setItemState({ ...itemState, items: item })
   }, [])
 
-  let fetchItem = itemState.items.filter(item => item._id === '5fff84574f1dd816eca21d31')
+  let fetchItem = itemState.items.filter(item => item._id === props.match.params.id)
 
   let fetchedItem = fetchItem[0]
 
   return (
     <>
       <Navbar />
-      { console.log(fetchedItem) }
+      { console.log(props.match.params.id) }
       { itemState.items.length > 0 ?
         <MDBContainer>
           <MDBRow>
@@ -54,7 +54,6 @@ const DisplayItem = id => {
         </MDBContainer>
         : null}
     </>
-
   )
 }
 
