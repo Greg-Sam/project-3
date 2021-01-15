@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from '../../Components/Navbar/Navbar.js'
+import Footer from '../../Components/Footer/Footer.js'
 import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 import './App.css' //Import here your file style
 
@@ -82,7 +83,10 @@ const Contributors = () => {
           <hr></hr>
         </MDBCol>
         </MDBRow>
+      <Footer />
     </MDBContainer>
+    
+
   )
 }
 
