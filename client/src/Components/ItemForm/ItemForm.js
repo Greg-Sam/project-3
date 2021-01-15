@@ -110,14 +110,14 @@ const ItemForm = (props) => {
                     onChange={props.handleInputChange}
                   />
 
-                  <MDBInput
+                  {/* <MDBInput
                     label="(Development) User ID"
                     icon="medkit"
                     group
                     name="_id"
                     value={props._id}
                     onChange={props.handleInputChange}
-                  />
+                  /> */}
                   
                 </div>
 
