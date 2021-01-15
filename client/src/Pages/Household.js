@@ -2,8 +2,6 @@
 import React from "react";
 import { useEffect, useState } from "react"
 import { MDBRow } from "mdbreact";
-import Jumbotron from '../Components/Jumbotron/Jumbotron'
-import Navbar from '../Components/Navbar/Navbar'
 import Item from '../utils/ItemAPI/ItemAPI'
 import Card from '../Components/Card/Card'
 
