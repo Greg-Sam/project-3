@@ -10,7 +10,7 @@ import Contributors from './Pages/Contributors'
 import DisplayItem from './Pages/DisplayItem'
 import Electronics from './Pages/Electronics'
 import Automotive from './Pages/Automotive'
-import Household from './Pages/Automotive'
+import Household from './Pages/Household'
 import Pets from './Pages/Pets'
 import Clothing from './Pages/Clothing'
 
@@ -48,27 +48,37 @@ const App = () => {
             <Contributors />
           </Route>
 
-          <Route path="/displayItem">
-            <DisplayItem />
-          </Route>
+          <Route path="/items/:id" 
+            render={(props) => < DisplayItem {...props} />} 
+          /> 
 
           <Route path="/electronics">
+            <Navbar />
+            <Jumbotron />
             <Electronics />
           </Route>
 
-          <Route path="/automotive">
+          <Route exact path="/automotive">
+            <Navbar />
+            <Jumbotron />
             <Automotive />
           </Route>
 
-          <Route path="/pets">
+          <Route exact path="/pets">
+            <Navbar />
+            <Jumbotron />
             <Pets />
           </Route>
 
-          <Route path="/clothing">
+          <Route exact path="/clothing">
+            <Navbar />
+            <Jumbotron />
             <Clothing />
           </Route>
 
-          <Route path="/household">
+          <Route exact path="/household">
+            <Navbar />
+            <Jumbotron />
             <Household />
           </Route>
         </Switch>

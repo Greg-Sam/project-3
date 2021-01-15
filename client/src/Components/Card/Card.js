@@ -13,12 +13,12 @@ export default function Card(props) {
           height="300px"
         />
         <MDBCardBody className="elegant-color text-center">
-          <a href="#!" className="grey-text">
+          <a href={props.category} className="grey-text">
             <h5>{props.category}</h5>
           </a>
           <h5>
             <strong>
-              <a href="#!" className="white-text" id={props.id}>
+              <a href={'items/' + props.id} className="white-text" id={props.id}>
                 {props.name}{" "}
               </a>
             </strong>

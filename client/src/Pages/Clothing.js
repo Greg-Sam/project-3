@@ -25,15 +25,13 @@ const Showcase = () => {
 
   return (
     <>
-      <Navbar />
-      <Jumbotron />
       {console.log(itemState.items)}
       {itemState.items.length > 0 ?
         <section className="text-center my-5">
           <h2 className="white-text h1-responsive font-weight-bold text-center my-2">
             Clothing
           </h2>
-          <p className="grey-text text-center w-responsive mx-auto mb-5">
+          <p className="grey-text text-center w-responsive mx-auto mb-3">
             View the most recent listings!
           </p>
           <MDBRow className="mr-0 ml-0 pl-5 pr-5">
