@@ -2,11 +2,13 @@
 import React from "react";
 import { useEffect, useState } from "react"
 import { MDBRow } from "mdbreact";
-import Item from '../../utils/ItemAPI/ItemAPI'
-import Card from '../Card/Card'
+import Jumbotron from '../Components/Jumbotron/Jumbotron'
+import Navbar from '../Components/Navbar/Navbar'
+import Item from '../utils/ItemAPI/ItemAPI'
+import Card from '../Components/Card/Card'
 
 const {
-  getItems
+  getCategory
 } = Item
 
 const Showcase = () => {
@@ -16,36 +18,37 @@ const Showcase = () => {
   })
 
   useEffect(async () => {
-    let { data: item } = await getItems()
+    let { data: item } = await getCategory('Household')
     setItemState({ ...itemState, isLoaded: true })
     setItemState({ ...itemState, items: item })
   }, [])
 
   return (
     <>
-      { console.log(itemState.items)}
-      { itemState.items.length > 0 ?
+      <Navbar />
+      <Jumbotron />
+      {console.log(itemState.items)}
+      {itemState.items.length > 0 ?
         <section className="text-center my-5">
           <h2 className="white-text h1-responsive font-weight-bold text-center my-2">
-            Recent listings
-      </h2>
+            Household
+          </h2>
           <p className="grey-text text-center w-responsive mx-auto mb-5">
             View the most recent listings!
-      </p>
+          </p>
           <MDBRow className="mr-0 ml-0 pl-5 pr-5">
-            { itemState.items.slice(itemState.items.length - 6, itemState.items.length).reverse().map((item, i) => (
+            {itemState.items.map((item, i) => (
               <Card
                 name={item.name}
                 image={item.image}
                 category={item.category}
                 price={item.price}
               />
-            )) }
+            ))}
           </MDBRow>
         </section>
         : null}
     </>
-
   );
 }
 
