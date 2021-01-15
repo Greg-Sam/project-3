@@ -24,9 +24,9 @@ passport.use(new JWTStrategy({
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
   secretOrKey: process.env.SECRET
 }, ({ id }, cb) => User.findById(id)))
-// .populate('')
-// .then(user => cb(null, user)
-// .catch(err => cb(err))))
+  // .populate('')
+  // .then(user => cb(null, user)
+  // .catch(err => cb(err))))
 
 app.use(require('./routes'))
 
