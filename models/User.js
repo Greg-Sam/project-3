@@ -14,6 +14,10 @@ const User = new Schema({
     type: String,
     required: true,
     unique: true
+  },
+  item: {
+    type: Schema.Types.ObjectId,
+    ref: 'Item'
   }
 }, { timestamps: true })
 
