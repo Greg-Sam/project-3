@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home'
 import NewPost from './Pages/NewPost'
 
+
 import React from "react";
 import {
   BrowserRouter as Router,
