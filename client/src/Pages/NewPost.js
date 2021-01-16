@@ -3,6 +3,9 @@ import ItemForm from '../Components/ItemForm/ItemForm'
 import { useState } from 'react'
 import Item from '../utils/ItemAPI/ItemAPI'
 import React from 'react'
+import 'firebase/storage'
+import { imageStore } from "../base.js";
+
 
 export default function NewPost() {
   const [ inputState, setInputState ] = useState({
@@ -14,6 +17,9 @@ export default function NewPost() {
     image: ''
   })
 
+  
+
+
   inputState.postItem = (event) => {
     event.preventDefault()
     let itemObject = {
@@ -22,12 +28,23 @@ export default function NewPost() {
       price: inputState.price,
       category: inputState.category,
       condition: inputState.condition,
-      image: inputState.image
+      image: fileState
     }
     let items = Item.createItem(itemObject)
     console.log(items)
   }
   
+  const [fileState, setFileState] = useState('')
+
+  const onFileChange = async (event) => {
+    const file = event.target.files[0];
+    const storageRef = imageStore.storage().ref();
+    const fileRef = storageRef.child(file.name);
+    await fileRef.put(file)
+    setFileState(await fileRef.getDownloadURL())
+  };
+
+
   inputState.handleInputChange = (event) => {
     setInputState({...inputState, [event.target.name]: event.target.value })
   }
@@ -43,7 +60,7 @@ export default function NewPost() {
         category={inputState.category}
         description={inputState.description}
         condition={inputState.condition}
-        image={inputState.image}
+        onFileChange={onFileChange}
       />
     </div>
   )

@@ -19,4 +19,16 @@ router.post('/users/login', (req, res) => {
   })
 })
 
+router.get('/user/getall/:id', (req, res) => {
+  User.findOne({_id: req.params.id})
+  .populate({
+    path: 'item',
+    model: 'Item'
+  })
+  .then(data => {
+    res.json(data)
+  })
+
+})
+
 module.exports = router

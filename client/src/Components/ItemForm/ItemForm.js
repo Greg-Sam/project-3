@@ -12,7 +12,10 @@ import {
   MDBFormInline
 } from "mdbreact";
 
+
 const ItemForm = (props) => {
+
+  
   return (
     <MDBContainer>
       <MDBRow>
@@ -80,6 +83,15 @@ const ItemForm = (props) => {
                         id='checkbox1'
                         containerClass='mr-5'
                       />
+                      <input
+                        type='file'
+                        label="(Development) Image link"
+                        icon="medkit"
+                        group
+                        name="image"
+                        // value={fileState}
+                        onChange={props.onFileChange}
+                      />
                       <MDBInput
                         label='Refurbished'
                         type='checkbox'
@@ -101,14 +113,7 @@ const ItemForm = (props) => {
                     </MDBFormInline>
                   </div>
 
-                  <MDBInput
-                    label="(Development) Image link"
-                    icon="medkit"
-                    group
-                    name="image"
-                    value={props.image}
-                    onChange={props.handleInputChange}
-                  />
+
 
                   {/* <MDBInput
                     label="(Development) User ID"
@@ -118,7 +123,7 @@ const ItemForm = (props) => {
                     value={props._id}
                     onChange={props.handleInputChange}
                   /> */}
-                  
+
                 </div>
 
                 <div className="text-center mt-4">

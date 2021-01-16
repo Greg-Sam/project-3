@@ -55,15 +55,15 @@ export default function LogIn() {
     password: ''
   })
 
-  inputState.postUser = async (event) => {
+  inputState.loginUser = async (event) => {
     event.preventDefault()
     console.log('ping')
     let userObject = {
       username: inputState.username,
       password: inputState.password
     }
-    let users = await User.loginUser(userObject)
-    console.log(users)
+    let {data: users} = await User.loginUser(userObject)
+    await localStorage.setItem('token', users)
   }
 
   inputState.handleInputChange = (event) => {
@@ -119,6 +119,7 @@ export default function LogIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={(e) => inputState.loginUser(e)}
           >
             Sign In
           </Button>

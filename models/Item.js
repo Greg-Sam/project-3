@@ -31,7 +31,7 @@ const Item = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User'
-  },
+  }
 }, { timestamps: true })
 
 Item.index({

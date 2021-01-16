@@ -1,5 +1,6 @@
 const router = require('express').Router()
-const { Item } = require('../models')
+const { Item, User } = require('../models')
+
 
 router.get('/items', (req, res) => {
   Item.find()
@@ -34,8 +35,26 @@ router.get('/items/:id', (req, res) => {
 })
 
 router.post('/items', (req, res) => {
-  Item.create(req.body)
-    .then(item => res.json(item))
+  let itemObject = {
+    name: req.body.name,
+    description: req.body.description,
+    price: req.body.price,
+    image: req.body.image,
+    condition: req.body.condition,
+    category: req.body.category,
+    user: req.body.userId
+  }
+  
+  
+  Item.create(itemObject)
+    .then(item => {
+      User.findByIdAndUpdate(req.body.userId, {$push: {item:item._id}})
+      .then(data => {
+        res.json(data)
+      })
+      .catch(err => console.log(err))
+      })
+      
     .catch(err => console.log(err))
 })
 

@@ -2,15 +2,15 @@ const { User, Item } = require('../models')
 
 const userSeed = [
   {
-    name: 'user1'
-    userName: 'user1',
+    name: 'user1',
+    username: 'user1',
     email: 'user1@gmail.com',
     password: 'password1234',
     image: 'https://img.favpng.com/11/1/19/computer-icons-user-profile-clip-art-png-favpng-5PNKaN9pyb0YVbv53YJy99Bi2.jpg'
   },
   {
-    name: 'user2'
-    userName: 'user2',
+    name: 'user2',
+    username: 'user2',
     email: 'user2@gmail.com',
     password: 'password1234',
     image: 'https://img.favpng.com/11/1/19/computer-icons-user-profile-clip-art-png-favpng-5PNKaN9pyb0YVbv53YJy99Bi2.jpg'
@@ -25,7 +25,7 @@ const itemSeed = [
     image: 'https://live.staticflickr.com/8014/7132453187_98abce3c17_b.jpg',
     isSold: false,
     condition: 'New—open box',
-    category: 'Electronics'
+    category: 'Electronics',
   },
   {
     name: "Nespresso EN167B Original Espresso Machine by De'Longhi, 2.3, Black",
