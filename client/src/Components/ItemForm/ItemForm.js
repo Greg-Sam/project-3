@@ -9,7 +9,8 @@ import {
   MDBCardHeader,
   MDBBtn,
   MDBInput,
-  MDBFormInline
+  MDBFormInline,
+  MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
 } from "mdbreact";
 
 
@@ -47,14 +48,26 @@ const ItemForm = (props) => {
                     onChange={props.handleInputChange}
                   />
 
-                  <MDBInput
+                  <MDBDropdown>
+                    <MDBDropdownToggle caret color="default">
+                      Category
+      </MDBDropdownToggle>
+                    <MDBDropdownMenu basic>
+                      <MDBDropdownItem>Electronics</MDBDropdownItem>
+                      <MDBDropdownItem>Automotive</MDBDropdownItem>
+                      <MDBDropdownItem>Household</MDBDropdownItem>
+                      <MDBDropdownItem>Separated link</MDBDropdownItem>
+                    </MDBDropdownMenu>
+                  </MDBDropdown>
+
+                  {/* <MDBInput
                     label="Category"
                     icon="folder-open"
                     group
                     name="category"
                     value={props.category}
                     onChange={props.handleInputChange}
-                  />
+                  /> */}
 
                   <MDBInput
                     label="Description"
