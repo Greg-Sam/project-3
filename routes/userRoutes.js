@@ -28,7 +28,12 @@ router.get('/user/getall/:id', (req, res) => {
   .then(data => {
     res.json(data)
   })
+})
 
+router.get('/users', (req, res) => {
+  User.find()
+    .then(users => res.json(users))
+    .catch(err => console.log(err))
 })
 
 module.exports = router

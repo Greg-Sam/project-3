@@ -18,7 +18,7 @@ export default function Card(props) {
           </a>
           <h5>
             <strong>
-              <a href={'items/' + props.id} className="white-text" id={props.id}>
+              <a href={'/items/' + props.id} className="white-text" id={props.id}>
                 {props.name}{" "}
               </a>
             </strong>

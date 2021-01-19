@@ -16,7 +16,7 @@ import {
 
 const ItemForm = (props) => {
 
-  
+
   return (
     <MDBContainer>
       <MDBRow>
@@ -48,26 +48,26 @@ const ItemForm = (props) => {
                     onChange={props.handleInputChange}
                   />
 
-                  <MDBDropdown>
+                  {/* <MDBDropdown>
                     <MDBDropdownToggle caret color="default">
                       Category
-      </MDBDropdownToggle>
+                    </MDBDropdownToggle>
                     <MDBDropdownMenu basic>
                       <MDBDropdownItem>Electronics</MDBDropdownItem>
                       <MDBDropdownItem>Automotive</MDBDropdownItem>
                       <MDBDropdownItem>Household</MDBDropdownItem>
                       <MDBDropdownItem>Separated link</MDBDropdownItem>
                     </MDBDropdownMenu>
-                  </MDBDropdown>
+                  </MDBDropdown> */}
 
-                  {/* <MDBInput
+                  <MDBInput
                     label="Category"
                     icon="folder-open"
                     group
                     name="category"
                     value={props.category}
                     onChange={props.handleInputChange}
-                  /> */}
+                  />
 
                   <MDBInput
                     label="Description"
