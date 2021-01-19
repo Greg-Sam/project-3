@@ -1,56 +1,12 @@
-import React from 'react';
-import User from '../../utils/UserAPI/UserAPI'
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
+import React from "react"
 import { useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import User from '../../utils/UserAPI/UserAPI'
 import Navbar from '../../Components/Navbar/Navbar'
+import Jumbotron from '../../Components/Jumbotron/Jumbotron'
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
+import { MDBContainer, MDBInput, MDBBtn, MDBBox } from 'mdbreact';
 
 export default function LogIn() {
-
   const [inputState, setInputState] = useState({
     username: '',
     password: ''
@@ -63,85 +19,58 @@ export default function LogIn() {
       username: inputState.username,
       password: inputState.password
     }
-    let {data: users} = await User.loginUser(userObject)
+    let { data: users } = await User.loginUser(userObject)
     await localStorage.setItem('token', users)
   }
 
   inputState.handleInputChange = (event) => {
     setInputState({ ...inputState, [event.target.name]: event.target.value })
   }
-
-  const classes = useStyles();
-
   return (
-    <Container component="main" maxWidth="xs">
-      <Navbar />
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Sign in
-        </Typography>
-        <form className={classes.form} noValidate>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            value={inputState.username}
-            onChange={inputState.handleInputChange}
-            id="username"
-            label="username"
-            name="username"
-            autoComplete="username"
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            value={inputState.email}
-            onChange={inputState.handleInputChange}
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-            onClick={(e) => inputState.loginUser(e)}
-          >
-            Sign In
-          </Button>
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="register" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
-            </Grid>
-          </Grid>
-        </form>
-      </div>
-      <Box mt={8}>
-        <Copyright />
-      </Box>
-    </Container>
+    <>
+     <Navbar />
+      <Jumbotron />
+    <MDBContainer>
+     
+      <MDBBox display="flex" justifyContent="center"> 
+       {/* <MDBRow className="">
+         <MDBCol md="6"> */}
+           <form>
+             <p className="h5 text-center mb-4">Sign In</p>
+             <div className="grey-text">
+               <MDBInput 
+              label="Type your username" 
+              icon="user" 
+              // group type="email" 
+                value={inputState.username}
+                onChange={inputState.handleInputChange}
+                id="username"
+                
+                name="username"
+                autoComplete="username"
+              validate error="wrong"
+              success="right" />
+              <MDBInput 
+              label="Type your password" 
+              icon="lock" 
+                value={inputState.password}
+                onChange={inputState.handleInputChange}
+                name="password"
+                
+                id="password"
+                autoComplete="current-password"
+              group type="password" 
+              validate />
+            </div>
+            <div className="text-center">
+              <MDBBtn type="submit" onClick={(e) => inputState.loginUser(e)} >Login</MDBBtn>
+            </div>
+          </form>
+        {/* </MDBCol>
+      </MDBRow> */}
+      </MDBBox>
+    </MDBContainer>
+    </>
   );
-}
+};
+
