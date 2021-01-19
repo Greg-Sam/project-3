@@ -3,7 +3,7 @@ import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
   MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
 } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 class Navbar extends Component {
   state = {
@@ -16,33 +16,38 @@ class Navbar extends Component {
 
   render() {
     return (
-      <Router>
+      
         <MDBNavbar color="unique-color-dark" dark expand="md">
           <MDBNavbarBrand>
-            <strong className="white-text">Navbar</strong>
+            <strong className="white-text">Seller's Remorse</strong>
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left>
               <MDBNavItem active>
-                <MDBNavLink to="/">Home</MDBNavLink>
+              <MDBNavLink to="/">Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="/Electronics">Electronics</MDBNavLink>
+              <MDBNavLink to="/register">LogIn</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="#!">Pricing</MDBNavLink>
+                <MDBNavLink to="/register">Register</MDBNavLink>
+              </MDBNavItem>
+              <MDBNavItem>
+                <MDBNavLink to="/sale">Sale</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBDropdown>
                   <MDBDropdownToggle nav caret>
-                    <span className="mr-2">Dropdown</span>
+                    <span className="mr-2">Catagory</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
+                    
+                    <MDBDropdownItem href="Electronics">electronics</MDBDropdownItem>
+                    <MDBDropdownItem href="/Automotive">automotive</MDBDropdownItem>
+                    <MDBDropdownItem href="/Clothing">clothing</MDBDropdownItem>
+                    <MDBDropdownItem href="/Household">household</MDBDropdownItem>
+                    <MDBDropdownItem href="/Pets">pets</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
@@ -58,7 +63,7 @@ class Navbar extends Component {
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
-      </Router>
+      
     );
   }
 }

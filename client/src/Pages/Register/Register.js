@@ -1,5 +1,6 @@
 import React from 'react';
 import User from '../../utils/UserAPI/UserAPI'
+import Navbar from '../../Components/Navbar/Navbar'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -81,6 +82,7 @@ export default function Register() {
 
   return (
     <Container component="main" maxWidth="xs">
+      <Navbar />
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>

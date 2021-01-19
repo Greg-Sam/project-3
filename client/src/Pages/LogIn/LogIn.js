@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import Navbar from '../../Components/Navbar/Navbar'
 
 function Copyright() {
   return (
@@ -74,6 +75,7 @@ export default function LogIn() {
 
   return (
     <Container component="main" maxWidth="xs">
+      <Navbar />
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>

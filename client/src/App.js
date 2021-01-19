@@ -15,6 +15,7 @@ import Pets from './Pages/Pets'
 import Clothing from './Pages/Clothing'
 
 
+
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -41,7 +42,7 @@ const App = () => {
             <Home/>
           </Route>
 
-          <Route path="/sell">
+          <Route path="/sale">
             <NewPost />
           </Route>
 
