@@ -13,6 +13,7 @@ import Automotive from './Pages/Automotive'
 import Household from './Pages/Household'
 import Pets from './Pages/Pets'
 import Clothing from './Pages/Clothing'
+import DisplaySeller from './Pages/DisplaySeller'
 
 
 import React from "react";
@@ -82,6 +83,10 @@ const App = () => {
             <Jumbotron />
             <Household />
           </Route>
+
+          <Route path="/users/:id"
+            render={(props) => < DisplaySeller {...props} />}
+          /> 
         </Switch>
       </div>
     </Router>

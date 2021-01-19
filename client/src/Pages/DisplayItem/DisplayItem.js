@@ -2,6 +2,7 @@
 import React from "react"
 import { useEffect, useState } from 'react'
 import Item from '../../utils/ItemAPI/ItemAPI'
+import User from '../../utils/UserAPI/UserAPI'
 import Navbar from '../../Components/Navbar/Navbar.js'
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardImage, MDBCardBody, MDBCardText, MDBCardTitle, MDBBtn } from "mdbreact";
 // import Axios from 'axios'
@@ -10,11 +11,19 @@ const {
   getItems
 } = Item
 
+// const {
+//   getUser
+// } = User
+
 const DisplayItem = (props) => {
   const [itemState, setItemState] = useState({
     isLoaded: false,
     items: []
   })
+
+  // const [userState, setUserState] = useState({
+  //   user: []
+  // })
 
   useEffect(async () => {
     let { data: item } = await getItems()
@@ -26,10 +35,16 @@ const DisplayItem = (props) => {
 
   let fetchedItem = fetchItem[0]
 
+  // useEffect(async () => {
+  //   let fetchedUser = await getUser(fetchedItem.user)
+  //   setUserState({ ...userState, user: fetchedUser.data })
+  // }, [])
+
   return (
     <>
       <Navbar />
-      { console.log(props.match.params.id) }
+      { console.log(fetchedItem) }
+      {/* { console.log(userState.user) } */}
       { itemState.items.length > 0 ?
         <MDBContainer>
           <MDBRow>
@@ -42,6 +57,7 @@ const DisplayItem = (props) => {
                 >
                   <h2>{fetchedItem.name}</h2>
                   <p>{fetchedItem.condition}</p>
+                  <p><a className="white-text" href={'/users/' + fetchedItem.user}>View seller info</a></p>
                 </MDBCardImage>
                 <MDBCardBody cascade className='text-center'>
                   <MDBCardTitle>${fetchedItem.price}</MDBCardTitle>
