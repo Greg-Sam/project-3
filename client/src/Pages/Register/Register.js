@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { useState } from 'react'
+import { Redirect } from "react-router-dom"
 
 function Copyright() {
   return (
@@ -80,6 +81,10 @@ export default function Register() {
   const classes = useStyles();
 
   return (
+    localStorage.getItem("isLoggedIn")
+      ?
+      <Redirect to="/" /> :
+
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>

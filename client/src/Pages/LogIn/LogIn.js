@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { Redirect } from "react-router-dom"
 
 function Copyright() {
   return (
@@ -57,13 +58,14 @@ export default function LogIn() {
 
   inputState.loginUser = async (event) => {
     event.preventDefault()
-    console.log('ping')
     let userObject = {
       username: inputState.username,
       password: inputState.password
     }
     let {data: users} = await User.loginUser(userObject)
-    await localStorage.setItem('token', users)
+    await localStorage.setItem('token', users.token)
+    await localStorage.setItem('userId', users.user)
+    await localStorage.setItem('isLoggedIn', users.isLoggedIn)
   }
 
   inputState.handleInputChange = (event) => {
@@ -73,6 +75,11 @@ export default function LogIn() {
   const classes = useStyles();
 
   return (
+    localStorage.getItem("isLoggedIn") 
+    ?
+
+    <Redirect to="/"/> :
+
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>

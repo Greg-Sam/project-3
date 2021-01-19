@@ -1,6 +1,11 @@
 const router = require('express').Router()
 const { Item, User } = require('../models')
 
+router.get('/items/:id', (req, res) => {
+  Item.findById(req.params.id)
+    .then(item => res.json(item))
+    .catch(err => console.log(err))
+})
 
 router.get('/items', (req, res) => {
   Item.find()
@@ -28,11 +33,7 @@ router.get('/items/search/:term', (req, res) => {
     .catch(err => console.log(err))
 })
 
-router.get('/items/:id', (req, res) => {
-  Item.findById(req.params.id)
-    .then(item => res.json(item))
-    .catch(err => console.log(err))
-})
+
 
 router.post('/items', (req, res) => {
   let itemObject = {

@@ -10,13 +10,16 @@ import {
   MDBBtn,
   MDBInput,
   MDBFormInline,
-  MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem
 } from "mdbreact";
 
 
 const ItemForm = (props) => {
 
-  
+
   return (
     <MDBContainer>
       <MDBRow>
@@ -28,7 +31,7 @@ const ItemForm = (props) => {
                   <MDBIcon icon="comment-dollar" /> What are we selling today?
                 </h3>
               </MDBCardHeader>
-              <form>
+              <>
                 <div className="grey-text">
                   <MDBInput
                     label="Item name"
@@ -36,6 +39,17 @@ const ItemForm = (props) => {
                     group
                     name="name"
                     value={props.name}
+                    onChange={props.handleInputChange}
+                  />
+
+
+                  <MDBInput
+                    label="Description"
+                    icon="align-left"
+                    type="textarea"
+                    outline
+                    name="description"
+                    value={props.description}
                     onChange={props.handleInputChange}
                   />
 
@@ -47,82 +61,63 @@ const ItemForm = (props) => {
                     value={props.price}
                     onChange={props.handleInputChange}
                   />
+                  {/* <select id="dropdown"
+                    onChange={props.handleDropdownChange} >
+                    <option value="null">Category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Automotive">Automotive</option>
+                    <option value="Household">Household</option>
+                    <option value="Pets">Pets</option>
+                    <option value="Clothing">Clothing</option>
+                  </select> */}
 
-                  <MDBDropdown>
+                  <MDBDropdown name="category">
                     <MDBDropdownToggle caret color="default">
-                      Category
-      </MDBDropdownToggle>
+                      {props.category}
+                    </MDBDropdownToggle>
                     <MDBDropdownMenu basic>
-                      <MDBDropdownItem>Electronics</MDBDropdownItem>
-                      <MDBDropdownItem>Automotive</MDBDropdownItem>
-                      <MDBDropdownItem>Household</MDBDropdownItem>
-                      <MDBDropdownItem>Separated link</MDBDropdownItem>
+                      <MDBDropdownItem onClick={() => props.handleSelectCategory('Electronics')}>Electronics</MDBDropdownItem>
+                      <MDBDropdownItem onClick={() => props.handleSelectCategory('Automotive')}>Automotive</MDBDropdownItem>
+                      <MDBDropdownItem onClick={() => props.handleSelectCategory('Household')}>Household</MDBDropdownItem>
+                      <MDBDropdownItem onClick={() => props.handleSelectCategory('Pets')}>Pets</MDBDropdownItem>
+                      <MDBDropdownItem onClick={() => props.handleSelectCategory('Clothing')}>Clothing</MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
+                
 
-                  {/* <MDBInput
-                    label="Category"
-                    icon="folder-open"
-                    group
-                    name="category"
-                    value={props.category}
-                    onChange={props.handleInputChange}
-                  /> */}
+                 
 
-                  <MDBInput
-                    label="Description"
-                    type="textarea"
-                    outline
-                    name="description"
-                    value={props.description}
-                    onChange={props.handleInputChange}
-                  />
 
-                  <MDBInput
-                    label="Condition"
-                    icon="medkit"
-                    group
-                    name="condition"
-                    value={props.condition}
-                    onChange={props.handleInputChange}
-                  />
+                  <MDBDropdown name="conditino">
+                    <MDBDropdownToggle caret color="default">
+                      {props.condition}
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu basic>
+                      <MDBDropdownItem onClick={() => props.handleSelectCondition('New')}>New</MDBDropdownItem>
+                      <MDBDropdownItem onClick={() => props.handleSelectCondition('New—open box')}>New—open box</MDBDropdownItem>
+                      <MDBDropdownItem onClick={() => props.handleSelectCondition('Used-good condition')}>Used-good condition</MDBDropdownItem>
+                      <MDBDropdownItem onClick={() => props.handleSelectCondition('Used-some wear and tear')}>Used-some wear and tear</MDBDropdownItem>
+                    </MDBDropdownMenu>
+                  </MDBDropdown>
+                  
+
 
                   <div>
                     {/* Material inline */}
                     <MDBFormInline>
-                      <MDBInput
-                        label='New'
-                        type='checkbox'
-                        id='checkbox1'
-                        containerClass='mr-5'
-                      />
+
+                      <h5 className="mt-2">Select Image File   </h5>
                       <input
+                      className="pl-2"
                         type='file'
-                        label="(Development) Image link"
+                        label="Image link"
                         icon="medkit"
                         group
                         name="image"
                         // value={fileState}
                         onChange={props.onFileChange}
                       />
-                      <MDBInput
-                        label='Refurbished'
-                        type='checkbox'
-                        id='checkbox2'
-                        containerClass='mr-5'
-                      />
-                      <MDBInput
-                        label='Pre-owned'
-                        type='checkbox'
-                        id='checkbox3'
-                        containerClass='mr-5'
-                      />
-                      <MDBInput
-                        label='Other'
-                        type='checkbox'
-                        id='checkbox4'
-                        containerClass='mr-5'
-                      />
+
                     </MDBFormInline>
                   </div>
 
@@ -149,7 +144,7 @@ const ItemForm = (props) => {
                     Create listing
                 </MDBBtn>
                 </div>
-              </form>
+              </>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
