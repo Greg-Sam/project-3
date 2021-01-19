@@ -14,13 +14,14 @@ export default function LogIn() {
 
   inputState.loginUser = async (event) => {
     event.preventDefault()
-    console.log('ping')
     let userObject = {
       username: inputState.username,
       password: inputState.password
     }
-    let { data: users } = await User.loginUser(userObject)
-    await localStorage.setItem('token', users)
+    let {data: users} = await User.loginUser(userObject)
+    await localStorage.setItem('token', users.token)
+    await localStorage.setItem('userId', users.user)
+    await localStorage.setItem('isLoggedIn', users.isLoggedIn)
   }
 
   inputState.handleInputChange = (event) => {
