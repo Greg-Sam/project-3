@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // 
 import Register from './Pages/Register/Register'
-import LogIn from './Pages/Login/Login'
+import LogIn from './Pages/LogIn/LogIn'
 import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home'
