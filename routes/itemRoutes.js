@@ -1,8 +1,30 @@
 const router = require('express').Router()
 const { Item, User } = require('../models')
 
-router.get('/items/:id', (req, res) => {
+router.get('/items/category/:category', (req, res) => {
+  Item.find({ 'category': req.params.category }).sort({ 'createdAt': -1 }).limit(6)
+    .then(item => res.json(item))
+    .catch(err => console.log(err))
+})
+
+router.get('/items/id/:id', (req, res) => {
   Item.findById(req.params.id)
+    .then(item => res.json(item))
+    .catch(err => console.log(err))
+})
+
+
+router.get('/items/latest', (req, res) => {
+  Item.find().sort({'createdAt':-1}).limit(6)
+    .then(items => {
+     res.json(items)
+    })
+    .catch(err => console.log(err))
+})
+
+
+router.get('/items/search/:term', (req, res) => {
+  Item.find({ $text: { $search: req.params.term } })
     .then(item => res.json(item))
     .catch(err => console.log(err))
 })
@@ -12,28 +34,6 @@ router.get('/items', (req, res) => {
     .then(items => res.json(items))
     .catch(err => console.log(err))
 })
-
-router.get('/items/latest', (req, res) => {
-  Item.find().sort({'createdAt':-1}).limit(5)
-    .then(items => {
-     res.json(items)
-    })
-    .catch(err => console.log(err))
-})
-
-router.get('/items/:category', (req, res) => {
-  Item.find({'category': req.params.category})
-    .then(item => res.json(item))
-    .catch(err => console.log(err))
-})
-
-router.get('/items/search/:term', (req, res) => {
-  Item.find({ $text: { $search: req.params.term } })
-    .then(item => res.json(item))
-    .catch(err => console.log(err))
-})
-
-
 
 router.post('/items', (req, res) => {
   let itemObject = {

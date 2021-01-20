@@ -10,7 +10,9 @@ export default function Card(props) {
           top
           alt="sample photo"
           overlay="white-slight"
-          height="300px"
+          height="auto"
+          width="auto"
+          object-fit="scale-down"
         />
         <MDBCardBody className="elegant-color text-center">
           <a href={props.category} className="grey-text">
