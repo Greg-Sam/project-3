@@ -43,7 +43,7 @@ class Navbar extends Component {
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
                     
-                    <MDBDropdownItem href="Electronics">electronics</MDBDropdownItem>
+                  <MDBDropdownItem href="/Electronics">Electronics</MDBDropdownItem>
                     <MDBDropdownItem href="/Automotive">automotive</MDBDropdownItem>
                     <MDBDropdownItem href="/Clothing">clothing</MDBDropdownItem>
                     <MDBDropdownItem href="/Household">household</MDBDropdownItem>

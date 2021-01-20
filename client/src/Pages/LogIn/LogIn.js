@@ -29,8 +29,8 @@ export default function LogIn() {
   }
   return (
     <>
-     <Navbar />
-      <Jumbotron />
+    <Navbar />
+    <Jumbotron />
     <MDBContainer>
      
       <MDBBox display="flex" justifyContent="center"> 
