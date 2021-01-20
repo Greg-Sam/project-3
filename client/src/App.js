@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // 
 import Register from './Pages/Register/Register'
-import LogIn from './Pages/LogIn/LogIn'
+import LogIn from './Pages/Login/Login'
 import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home'
@@ -14,6 +14,7 @@ import Household from './Pages/Household'
 import Pets from './Pages/Pets'
 import Clothing from './Pages/Clothing'
 import DisplaySeller from './Pages/DisplaySeller'
+
 
 
 import React from "react";
@@ -42,7 +43,7 @@ const App = () => {
             <Home/>
           </Route>
 
-          <Route path="/sell">
+          <Route path="/sale">
             <NewPost />
           </Route>
 

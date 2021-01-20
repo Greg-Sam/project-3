@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from '../../Components/Navbar/Navbar.js'
+import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer.js'
 import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 import './App.css' //Import here your file style
