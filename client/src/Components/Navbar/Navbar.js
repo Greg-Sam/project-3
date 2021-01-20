@@ -34,15 +34,14 @@ class Navbar extends Component {
                 <MDBNavLink to="/register">Register</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="/sale">Sale</MDBNavLink>
+                <MDBNavLink to="/sell">Sell</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBDropdown>
                   <MDBDropdownToggle nav caret>
-                    <span className="mr-2">Catagory</span>
+                    <span className="mr-2">Category</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    
                     <MDBDropdownItem href="Electronics">electronics</MDBDropdownItem>
                     <MDBDropdownItem href="/Automotive">automotive</MDBDropdownItem>
                     <MDBDropdownItem href="/Clothing">clothing</MDBDropdownItem>
