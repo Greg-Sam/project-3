@@ -24,7 +24,7 @@ const Showcase = () => {
 
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
       {console.log(itemState.items)}
       {itemState.items.length > 0 ?
         <section className="text-center my-5">

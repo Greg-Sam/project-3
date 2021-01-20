@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const { Item, User } = require('../models')
 
-router.get('/items/:id', (req, res) => {
+router.get('/items/id/:id', (req, res) => {
   Item.findById(req.params.id)
     .then(item => res.json(item))
     .catch(err => console.log(err))
@@ -21,7 +21,7 @@ router.get('/items/latest', (req, res) => {
     .catch(err => console.log(err))
 })
 
-router.get('/items/:category', (req, res) => {
+router.get('/items/category/:category', (req, res) => {
   Item.find({'category': req.params.category})
     .then(item => res.json(item))
     .catch(err => console.log(err))
