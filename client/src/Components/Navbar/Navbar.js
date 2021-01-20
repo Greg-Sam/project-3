@@ -3,7 +3,7 @@ import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
   MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
 } from "mdbreact";
-import { BrowserRouter as Router} from 'react-router-dom';
+// import { BrowserRouter as Router} from 'react-router-dom';
 
 class Navbar extends Component {
   state = {
@@ -42,11 +42,12 @@ class Navbar extends Component {
                     <span className="mr-2">Category</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <MDBDropdownItem href="Electronics">electronics</MDBDropdownItem>
-                    <MDBDropdownItem href="/Automotive">automotive</MDBDropdownItem>
-                    <MDBDropdownItem href="/Clothing">clothing</MDBDropdownItem>
-                    <MDBDropdownItem href="/Household">household</MDBDropdownItem>
-                    <MDBDropdownItem href="/Pets">pets</MDBDropdownItem>
+                    
+                  <MDBDropdownItem href="/Electronics">Electronics</MDBDropdownItem>
+                    <MDBDropdownItem href="/Automotive">Automotive</MDBDropdownItem>
+                    <MDBDropdownItem href="/Clothing">Clothing</MDBDropdownItem>
+                    <MDBDropdownItem href="/Household">Household</MDBDropdownItem>
+                    <MDBDropdownItem href="/Pets">Pets</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>

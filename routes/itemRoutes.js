@@ -43,13 +43,11 @@ router.post('/items', (req, res) => {
     image: req.body.image,
     condition: req.body.condition,
     category: req.body.category,
-    user: req.body.userId
+    user: req.body.user
   }
-  
-  
   Item.create(itemObject)
     .then(item => {
-      User.findByIdAndUpdate(req.body.userId, {$push: {item:item._id}})
+      User.findByIdAndUpdate(req.body.user, {$push: {item:item._id}})
       .then(data => {
         res.json(data)
       })

@@ -64,7 +64,7 @@ export default function NewPost() {
     <div>
 
       {
-        localStorage.getItem("isLoggedIn")
+        localStorage.getItem("isLoggedIn")==="true"
           ?
           <>
             <Navbar />

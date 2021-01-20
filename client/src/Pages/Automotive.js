@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import { MDBRow } from "mdbreact";
 import Item from '../utils/ItemAPI/ItemAPI'
 import Card from '../Components/Card/Card'
-import Navbar from '../Components/Navbar/Navbar'
 
 const {
   getCategory

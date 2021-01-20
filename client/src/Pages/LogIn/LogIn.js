@@ -3,13 +3,14 @@ import { useState } from 'react'
 import User from '../../utils/UserAPI/UserAPI'
 import Navbar from '../../Components/Navbar/Navbar'
 import Jumbotron from '../../Components/Jumbotron/Jumbotron'
-
+import { Redirect } from "react-router-dom"
 import { MDBContainer, MDBInput, MDBBtn, MDBBox } from 'mdbreact';
 
 export default function LogIn() {
   const [inputState, setInputState] = useState({
     username: '',
-    password: ''
+    password: '',
+    isLoggedIn: false
   })
 
   inputState.loginUser = async (event) => {
@@ -22,15 +23,21 @@ export default function LogIn() {
     await localStorage.setItem('token', users.token)
     await localStorage.setItem('userId', users.user)
     await localStorage.setItem('isLoggedIn', users.isLoggedIn)
+    if (users.isLoggedIn) {setInputState({ ...inputState, isLoggedIn: true })}
   }
 
   inputState.handleInputChange = (event) => {
     setInputState({ ...inputState, [event.target.name]: event.target.value })
   }
   return (
+    
     <>
-     <Navbar />
-      <Jumbotron />
+      {
+      inputState.isLoggedIn !== true
+        ?
+        <>
+    <Navbar />
+    <Jumbotron />
     <MDBContainer>
      
       <MDBBox display="flex" justifyContent="center"> 
@@ -72,6 +79,10 @@ export default function LogIn() {
       </MDBBox>
     </MDBContainer>
     </>
+    :
+  <Redirect to="/" />
+    }
+  </>
   );
 };
 
