@@ -24,10 +24,9 @@ const Footer = () => {
           </MDBCol> 
           <MDBCol md="3">
             <h5 className="title">Our Other Project</h5>
-            <a href="https://radiant-headland-26253.herokuapp.com/index.html"><img className="img-fluid" alt="CodeBook" src="images/coodbook-logo.png" height="40px" width="100px" /></a>
+            <a href="https://radiant-headland-26253.herokuapp.com/index.html"><img className="img-fluid" alt="CodeBook" src="../../../images/codebook-logo.png" height="40px" width="100px" /></a>
             <hr></hr>
             
-           
           </MDBCol>
           <MDBCol md="3">
             <h5 className="title">Meet The Team</h5>

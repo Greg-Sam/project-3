@@ -47,6 +47,7 @@ export default function LogIn() {
                   <p className="h5 text-center mb-4 grey-text" >Log In</p>
              <div className="grey-text">
                <MDBInput 
+                      className="white-text"
               label="Type your username" 
               icon="user" 
               // group type="email" 
@@ -59,6 +60,7 @@ export default function LogIn() {
               validate error="wrong"
               success="right" />
               <MDBInput 
+              className="white-text"
               label="Type your password" 
               icon="lock" 
                 value={inputState.password}

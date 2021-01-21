@@ -1,5 +1,5 @@
 import React from "react"
-import { MDBContainer, MDBLink , MDBBtn, MDBInput, MDBBox } from 'mdbreact'
+import { MDBContainer, MDBLink, MDBBtn, MDBInput, MDBBox } from 'mdbreact'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 import Jumbotron from '../../Components/Jumbotron/Jumbotron'
@@ -27,15 +27,13 @@ export default function Register() {
       // isRegistered: true
     }
     let users = await User.createUser(userObject)
-    setInputState({...inputState, isRegistered:true})
+    setInputState({ ...inputState, isRegistered: true })
     console.log(users)
-    if ( users.data.name) 
-    {
+    if (users.data.name) {
       window.location = '/regfail'
-    } else
-    {
+    } else {
       window.location = '/login'
-    } 
+    }
   }
 
   inputState.handleInputChange = (event) => {
@@ -43,83 +41,87 @@ export default function Register() {
   }
   return (
     <>
-    {
-    inputState.isRegistered !== "true"
-    ?
-    <>
-    <Navbar />
-    <Jumbotron />
-    
-    <MDBContainer>
-      <MDBBox display="flex" justifyContent="center">
-          <form>
-            <p className="h5 text-center mb-4">Sign up</p>
-            <div className="grey-text">
-              <MDBInput 
-              label="Your name" 
-              icon="user" 
-              group type="text" 
-           
-              value={inputState.name}
-              onChange={inputState.handleInputChange}
-              id="Name"
-              name="name"
-              validate error="wrong"
-              success="right" />
-              <MDBInput 
-              label="Your email" 
-              icon="envelope" 
-              group type="email" 
-              
-              value={inputState.email}
-              onChange={inputState.handleInputChange}
-              id="email"
-              name="email"
-              validate error="wrong"
-              success="right" />
-              <MDBInput 
-              label="User Name" icon="hand-point-right" 
-              group type="text" 
-             
-              value={inputState.username}
-              onChange={inputState.handleInputChange}
-              id="username"
-              name="username"
-              validate error="wrong" 
-              success="right" />
-              <MDBInput 
-                label="Your password" 
-                icon="lock" 
-                value={inputState.password}
-                onChange={inputState.handleInputChange}
-                name="password"
-                type="password"
-                id="password"
-                // group type="password" 
-                validate />
-            </div>
-            <div className="text-center">
-              <MDBBtn
-               type="submit" 
-               color="primary"
-              //  className={classes.submit}
-               onClick={(e) => inputState.postUser(e)}
-               >Register</MDBBtn>
-            </div>
-          </form>
-        </MDBBox>
+      {
+        inputState.isRegistered !== "true"
+          ?
+          <>
+            <Navbar />
+            <Jumbotron />
+
+            <MDBContainer>
+              <MDBBox display="flex" justifyContent="center">
+                <form>
+                  <p className="h5 text-center mb-4">Sign up</p>
+                  <div className="grey-text">
+                    <MDBInput
+                      className="white-text"
+                      label="Your name"
+                      icon="user"
+                      group type="text"
+
+                      value={inputState.name}
+                      onChange={inputState.handleInputChange}
+                      id="Name"
+                      name="name"
+                      validate error="wrong"
+                      success="right" />
+                    <MDBInput
+                      className="white-text"
+                      label="Your email"
+                      icon="envelope"
+                      group type="email"
+
+                      value={inputState.email}
+                      onChange={inputState.handleInputChange}
+                      id="email"
+                      name="email"
+                      validate error="wrong"
+                      success="right" />
+                    <MDBInput
+                      className="white-text"
+                      label="User Name" icon="hand-point-right"
+                      group type="text"
+
+                      value={inputState.username}
+                      onChange={inputState.handleInputChange}
+                      id="username"
+                      name="username"
+                      validate error="wrong"
+                      success="right" />
+                    <MDBInput
+                      className="white-text"
+                      label="Your password"
+                      icon="lock"
+                      value={inputState.password}
+                      onChange={inputState.handleInputChange}
+                      name="password"
+                      type="password"
+                      id="password"
+                      // group type="password" 
+                      validate />
+                  </div>
+                  <div className="text-center">
+                    <MDBBtn
+                      type="submit"
+                      color="primary"
+                      //  className={classes.submit}
+                      onClick={(e) => inputState.postUser(e)}
+                    >Register</MDBBtn>
+                  </div>
+                </form>
+              </MDBBox>
               <hr></hr>
               <MDBBox display="flex" justifyContent="center">
                 {/* <p className="h5 text-center mb-4 grey-text">Don't have an accout?</p> */}
                 <MDBLink to='/login' className="h5 text-center mb-4 grey-text" display="flex" justifyContent="center" >Already have an accout? Log In</MDBLink>
               </MDBBox>
-    </MDBContainer>
-      <Footer />
-    </>
-   
-    :
-    <Redirect to="/login" />
-    }
+            </MDBContainer>
+            <Footer />
+          </>
+
+          :
+          <Redirect to="/login" />
+      }
     </>
   );
 };
