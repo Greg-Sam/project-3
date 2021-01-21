@@ -2,6 +2,7 @@
 // 
 import Register from './Pages/Register/Register'
 import LogIn from './Pages/LogIn/LogIn'
+import LogOut from './Pages/LogOut'
 import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home'
@@ -44,6 +45,10 @@ const App = () => {
 
           <Route path="/login">
             <LogIn />
+          </Route>
+
+          <Route path="/logout">
+            <LogOut />
           </Route>
 
           <Route exact path="/">
