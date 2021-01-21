@@ -3,8 +3,9 @@ import { useState } from 'react'
 import User from '../../utils/UserAPI/UserAPI'
 import Navbar from '../../Components/Navbar/Navbar'
 import Jumbotron from '../../Components/Jumbotron/Jumbotron'
+import Footer from '../../Components/Footer/Footer'
 import { Redirect } from "react-router-dom"
-import { MDBContainer, MDBInput, MDBBtn, MDBBox } from 'mdbreact';
+import { MDBContainer, MDBInput, MDBBtn, MDBBox, MDBLink  } from 'mdbreact';
 
 export default function LogIn() {
   const [inputState, setInputState] = useState({
@@ -41,10 +42,9 @@ export default function LogIn() {
     <MDBContainer>
      
       <MDBBox display="flex" justifyContent="center"> 
-       {/* <MDBRow className="">
-         <MDBCol md="6"> */}
+       
            <form>
-             <p className="h5 text-center mb-4">Sign In</p>
+                  <p className="h5 text-center mb-4 grey-text" >Log In</p>
              <div className="grey-text">
                <MDBInput 
               label="Type your username" 
@@ -74,14 +74,21 @@ export default function LogIn() {
               <MDBBtn type="submit" onClick={(e) => inputState.loginUser(e)} >Login</MDBBtn>
             </div>
           </form>
-        {/* </MDBCol>
-      </MDBRow> */}
+       
+      </MDBBox>
+              <hr></hr> 
+              <MDBBox display="flex" justifyContent="center">
+                {/* <p className="h5 text-center mb-4 grey-text">Don't have an accout?</p> */}
+                <MDBLink to='/register' className="h5 text-center mb-4 grey-text" display="flex" justifyContent="center" >Don't have an accout? Sign Up</MDBLink>
       </MDBBox>
     </MDBContainer>
+     <Footer />
     </>
+    
     :
-  <Redirect to="/" />
+   <Redirect to="/" />
     }
+    
   </>
   );
 };

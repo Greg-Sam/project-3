@@ -1,16 +1,19 @@
 import React from "react"
-import { MDBContainer, MDBBtn, MDBInput, MDBBox } from 'mdbreact'
+import { MDBContainer, MDBLink , MDBBtn, MDBInput, MDBBox } from 'mdbreact'
 import Navbar from '../../Components/Navbar/Navbar'
+import Footer from '../../Components/Footer/Footer'
 import Jumbotron from '../../Components/Jumbotron/Jumbotron'
 import User from '../../utils/UserAPI/UserAPI'
 import { useState } from 'react'
+import { Redirect } from "react-router-dom"
 
 export default function Register() {
   const [inputState, setInputState] = useState({
     name: '',
     username: '',
     email: '',
-    password: ''
+    password: '',
+    isRegistered: false
   })
 
   inputState.postUser = async (event) => {
@@ -21,8 +24,10 @@ export default function Register() {
       username: inputState.username,
       email: inputState.email,
       password: inputState.password
+      // isRegistered: true
     }
     let users = await User.createUser(userObject)
+    setInputState({...inputState, isRegistered:true})
     console.log(users)
   }
 
@@ -30,6 +35,10 @@ export default function Register() {
     setInputState({ ...inputState, [event.target.name]: event.target.value })
   }
   return (
+    <>
+    {
+    inputState.isRegistered !== true
+    ?
     <>
     <Navbar />
     <Jumbotron />
@@ -43,7 +52,7 @@ export default function Register() {
               label="Your name" 
               icon="user" 
               group type="text" 
-              fullWidth
+           
               value={inputState.name}
               onChange={inputState.handleInputChange}
               id="Name"
@@ -54,7 +63,7 @@ export default function Register() {
               label="Your email" 
               icon="envelope" 
               group type="email" 
-              fullWidth
+              
               value={inputState.email}
               onChange={inputState.handleInputChange}
               id="email"
@@ -64,7 +73,7 @@ export default function Register() {
               <MDBInput 
               label="User Name" icon="hand-point-right" 
               group type="text" 
-              required fullWidth
+             
               value={inputState.username}
               onChange={inputState.handleInputChange}
               id="username"
@@ -92,7 +101,18 @@ export default function Register() {
             </div>
           </form>
         </MDBBox>
+              <hr></hr>
+              <MDBBox display="flex" justifyContent="center">
+                {/* <p className="h5 text-center mb-4 grey-text">Don't have an accout?</p> */}
+                <MDBLink to='/login' className="h5 text-center mb-4 grey-text" display="flex" justifyContent="center" >Already have an accout? Log In</MDBLink>
+              </MDBBox>
     </MDBContainer>
+      <Footer />
+    </>
+   
+    :
+    <Redirect to="/login" />
+    }
     </>
   );
 };

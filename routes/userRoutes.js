@@ -8,6 +8,7 @@ router.post('/users/register', (req, res) => {
   User.register(new User({ name, username, email }), password, err => {
     if(err) { console.log(err) }
     res.sendStatus(200)
+    // res.json({isRegistered:true})
   })
 })
 

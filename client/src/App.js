@@ -35,9 +35,9 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          {/* <Route path="/register">
+          <Route path="/register">
             <Register />
-          </Route> */}
+          </Route>
          
           <Route path="/modal">
             <LogOutModal />
