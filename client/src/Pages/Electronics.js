@@ -18,7 +18,7 @@ const {
   getCategory
 } = Item
 
-const Showcase = () => {
+const Showcase = (props) => {
   const [itemState, setItemState] = useState({
     isLoaded: false,
     items: []
@@ -37,7 +37,6 @@ const Showcase = () => {
     setItemState({ ...itemState, items: itemArray })
     // window.location.reload()
   }
-
 
   const SortPriceLowHi = () => {
     itemArray.sort((a, b) => (a.price > b.price) ? 1 : -1)
@@ -58,11 +57,10 @@ const Showcase = () => {
     // window.location.reload()
   }
 
-
   return (
     <>
       {/* <Navbar /> */}
-      {/* {console.log(itemState.items)} */}
+      {console.log(parseInt(props.limit))}
       {itemState.items.length > 0 ?
         <section className="text-center my-5">
           <h2 className="white-text h1-responsive font-weight-bold text-center my-2">
@@ -92,7 +90,8 @@ const Showcase = () => {
 
           }
           <MDBRow className="mr-0 ml-0 pl-5 pr-5">
-            {itemState.items.map((item, i) => (
+           
+            {itemState.items.slice(0, parseInt(props.limit)).map((item, i) => (
               <Card
                 id={item._id}
                 name={item.name}
