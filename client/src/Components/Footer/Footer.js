@@ -9,16 +9,16 @@ const Footer = () => {
         <MDBRow>
           <MDBCol md="6">
             <h5 className="title">Technology Used</h5>
-            <img src="https://img.icons8.com/color/60/000000/javascript.png" />
-            <img src="https://img.icons8.com/color/96/000000/nodejs.png" />
-            <img src="https://img.icons8.com/nolan/60/react-native.png" />
+            <img src="https://img.icons8.com/color/60/000000/javascript.png" alt="JavaCript" />
+            <img src="https://img.icons8.com/color/96/000000/nodejs.png" alt="Node JS"/>
+            <img src="https://img.icons8.com/nolan/60/react-native.png" alt="React" />
             
-            <img src="https://img.icons8.com/color/60/000000/mongodb.png" />
+            <img src="https://img.icons8.com/color/60/000000/mongodb.png" alt="Mongo DB" />
             
-            <img src="https://img.icons8.com/color/60/000000/npm.png" />
-            <img src="https://img.icons8.com/nolan/64/heroku.png" />
-            <img src="https://img.icons8.com/plasticine/80/000000/github.png" />
-            <img src="https://img.icons8.com/color/48/000000/firebase.png" />
+            <img src="https://img.icons8.com/color/60/000000/npm.png" alt="NPM"/>
+            <img src="https://img.icons8.com/nolan/64/heroku.png" alt="Heroku"/>
+            <img src="https://img.icons8.com/plasticine/80/000000/github.png" alt="GitHub" />
+            <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="FireBase"/>
 
             
           </MDBCol> 
