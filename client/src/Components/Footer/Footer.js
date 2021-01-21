@@ -1,6 +1,6 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact"
-// import { BrowserRouter as Router } from 'react-router-dom';
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact"
+
 
 const Footer = () => {
   return (
@@ -27,21 +27,7 @@ const Footer = () => {
             <a href="https://radiant-headland-26253.herokuapp.com/index.html"><img className="img-fluid" alt="CodeBook" src="images/coodbook-logo.png" height="40px" width="100px" /></a>
             <hr></hr>
             
-            {/* { <h5 className="title">Links</h5> }
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Contributors</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Contact</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Support</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Feedback</a>
-              </li>
-            </ul> */}
+           
           </MDBCol>
           <MDBCol md="3">
             <h5 className="title">Meet The Team</h5>
