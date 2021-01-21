@@ -88,7 +88,7 @@ const ItemForm = (props) => {
                  
 
 
-                  <MDBDropdown name="conditino">
+                  <MDBDropdown name="condition">
                     <MDBDropdownToggle caret color="default">
                       {props.condition}
                     </MDBDropdownToggle>

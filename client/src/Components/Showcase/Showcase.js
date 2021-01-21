@@ -9,11 +9,14 @@ const {
   getItems
 } = Item
 
+
+
 const Showcase = () => {
   const [itemState, setItemState] = useState({
     isLoaded: false,
     items: []
   })
+
 
   useEffect(async () => {
     let { data: item } = await getItems()
@@ -21,9 +24,11 @@ const Showcase = () => {
     setItemState({ ...itemState, items: item })
   }, [])
 
+ 
+
   return (
     <>
-      { console.log(itemState.items)}
+      {/* { console.log(itemState.items)} */}
       { itemState.items.length > 0 ?
         <section className="text-center my-5">
           <h2 className="white-text h1-responsive font-weight-bold text-center my-2">
