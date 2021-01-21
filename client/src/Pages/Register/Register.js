@@ -1,5 +1,5 @@
 import React from "react"
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput, MDBBox } from 'mdbreact'
+import { MDBContainer, MDBLink , MDBBtn, MDBInput, MDBBox } from 'mdbreact'
 import Navbar from '../../Components/Navbar/Navbar'
 import Jumbotron from '../../Components/Jumbotron/Jumbotron'
 import User from '../../utils/UserAPI/UserAPI'
@@ -100,6 +100,11 @@ export default function Register() {
             </div>
           </form>
         </MDBBox>
+              <hr></hr>
+              <MDBBox display="flex" justifyContent="center">
+                {/* <p className="h5 text-center mb-4 grey-text">Don't have an accout?</p> */}
+                <MDBLink to='/login' className="h5 text-center mb-4 grey-text" display="flex" justifyContent="center" >Already have an accout? Log In</MDBLink>
+              </MDBBox>
     </MDBContainer>
     </>
     :
