@@ -28,14 +28,14 @@ export default function Register() {
     }
     let users = await User.createUser(userObject)
     setInputState({...inputState, isRegistered:true})
-    console.log(users.status)
-    // if ( === 500) 
-    // {
-    //   window.location = '/regfail'
-    // } else
-    // {
+    console.log(users)
+    if ( users.data.name) 
+    {
+      window.location = '/regfail'
+    } else
+    {
       window.location = '/login'
-    // } 
+    } 
   }
 
   inputState.handleInputChange = (event) => {
