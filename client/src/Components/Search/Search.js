@@ -33,26 +33,28 @@ export default function Search() {
   return (
 
     <>
-      {
+      {/* {
         localStorage.term === ""
           ?
-          <>
+          <> */}
             <MDBNavbarNav right >
               <MDBFormInline className="md-form mr-auto m-0">
                 <input className="form-control mr-sm-2" name="textEntry" type="text"
                   // placeholder="Search" 
                   aria-label="Search"
                   onChange={handleInputChange} />
-                <MDBBtn outline color="white" size="sm" type="submit" className="mr-auto"
-                  onClick={() => handleNavbarClick()}>
+                <MDBBtn outline color="white" 
+                size="sm" type="submit" className="mr-auto"
+                  onClick={() => handleNavbarClick()}
+                  href="/Results">
                   Search
                 </MDBBtn>
               </MDBFormInline>
             </MDBNavbarNav>
-          </>
+          {/* </>
           :
           <Redirect to="/results" />
-      }
+      } */}
     </>
 
   )

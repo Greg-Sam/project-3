@@ -52,8 +52,13 @@ class Navbar extends Component {
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="/logout">Log Out</MDBNavLink>
+            </MDBNavItem>
             </MDBNavbarNav>
+          
             <MDBNavbarNav right>
+            
               <MDBNavItem>
                 <Search />
               </MDBNavItem>

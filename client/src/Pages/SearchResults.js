@@ -23,7 +23,6 @@ const Showcase = () => {
     getSearched(itemState.term)
     setItemState({ ...itemState, isLoaded: true })
     setItemState({ ...itemState, items: item })
-    localStorage.setItem('term', '')
   }, [])
 
 
