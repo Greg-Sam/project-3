@@ -17,8 +17,8 @@ class LogOutModal extends Component {
             Please select from the options below
         </MDBModalBody>
           <MDBModalFooter>
-            <MDBBtn color="secondary" href="/">Home Page</MDBBtn>
-            <MDBBtn color="primary" href="/login">Login</MDBBtn>
+            <MDBBtn rounded className="mb-3" gradient="peach" href="/">Home Page</MDBBtn>
+            <MDBBtn rounded className="mb-3" gradient="peach" href="/login">Login</MDBBtn>
           </MDBModalFooter>
         </MDBModal>
       </MDBContainer>

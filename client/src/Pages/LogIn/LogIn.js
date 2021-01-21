@@ -5,6 +5,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import Jumbotron from '../../Components/Jumbotron/Jumbotron'
 import Footer from '../../Components/Footer/Footer'
 import { Redirect } from "react-router-dom"
+import '../../utils/App.css'
 import { MDBContainer, MDBInput, MDBBtn, MDBBox, MDBLink  } from 'mdbreact';
 
 export default function LogIn() {
@@ -53,7 +54,7 @@ export default function LogIn() {
                 value={inputState.username}
                 onChange={inputState.handleInputChange}
                 id="username"
-                
+                className='text-white'
                 name="username"
                 autoComplete="username"
               validate error="wrong"
@@ -64,14 +65,14 @@ export default function LogIn() {
                 value={inputState.password}
                 onChange={inputState.handleInputChange}
                 name="password"
-                
+                className='text-white'
                 id="password"
                 autoComplete="current-password"
               group type="password" 
               validate />
             </div>
             <div className="text-center">
-              <MDBBtn type="submit" onClick={(e) => inputState.loginUser(e)} >Login</MDBBtn>
+                    <MDBBtn rounded className="mb-3" gradient="peach" onClick={(e) => inputState.loginUser(e)} >Login</MDBBtn>
             </div>
           </form>
        

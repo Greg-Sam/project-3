@@ -25,15 +25,16 @@ const ItemForm = (props) => {
       <MDBRow>
         <MDBCol>
           <MDBCard>
-            <MDBCardBody>
-              <MDBCardHeader className="form-header deep-blue-gradient rounded">
+            <MDBCardBody className='stylish-color-dark'>
+              <MDBCardHeader className="form-header peach-gradient rounded">
                 <h3 className="my-3 white-text">
                   <MDBIcon icon="comment-dollar" /> What are we selling today?
                 </h3>
               </MDBCardHeader>
               <>
-                <div className="grey-text">
+                <div className="grey-text ">
                   <MDBInput
+                    className='text-white'
                     label="Item name"
                     icon="frog"
                     group
@@ -44,6 +45,7 @@ const ItemForm = (props) => {
 
 
                   <MDBInput
+                    className='text-white'
                     label="Description"
                     icon="align-left"
                     type="textarea"
@@ -54,11 +56,21 @@ const ItemForm = (props) => {
                   />
 
                   <MDBInput
+                    className='text-white'
                     label="Price"
                     icon="money-bill-alt"
                     group
                     name="price"
                     value={props.price}
+                    onChange={props.handleInputChange}
+                  />
+                  <MDBInput
+                    className='text-white'
+                    label="Condition"
+                    icon="hand-point-right"
+                    group
+                    name="condition"
+                    value={props.condition}
                     onChange={props.handleInputChange}
                   />
                   {/* <select id="dropdown"
@@ -70,12 +82,13 @@ const ItemForm = (props) => {
                     <option value="Pets">Pets</option>
                     <option value="Clothing">Clothing</option>
                   </select> */}
-
-                  <MDBDropdown name="category">
-                    <MDBDropdownToggle caret color="default">
+                  <MDBRow className="text-center">
+                    <MDBCol md="6"className="text-center justify-content-center">
+                  <MDBDropdown name="category" >
+                    <MDBDropdownToggle caret color="mdb-color" className="rounded">
                       {props.category}
                     </MDBDropdownToggle>
-                    <MDBDropdownMenu basic>
+                    <MDBDropdownMenu basic >
                       <MDBDropdownItem onClick={() => props.handleSelectCategory('Electronics')}>Electronics</MDBDropdownItem>
                       <MDBDropdownItem onClick={() => props.handleSelectCategory('Automotive')}>Automotive</MDBDropdownItem>
                       <MDBDropdownItem onClick={() => props.handleSelectCategory('Household')}>Household</MDBDropdownItem>
@@ -83,13 +96,13 @@ const ItemForm = (props) => {
                       <MDBDropdownItem onClick={() => props.handleSelectCategory('Clothing')}>Clothing</MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
-                
-
+                    </MDBCol>
+                 
                  
 
 
-                  <MDBDropdown name="conditino">
-                    <MDBDropdownToggle caret color="default">
+                  {/* <MDBDropdown name="conditino">
+                    <MDBDropdownToggle caret className="stylish-color-dark rounded">
                       {props.condition}
                     </MDBDropdownToggle>
                     <MDBDropdownMenu basic>
@@ -98,10 +111,10 @@ const ItemForm = (props) => {
                       <MDBDropdownItem onClick={() => props.handleSelectCondition('Used-good condition')}>Used-good condition</MDBDropdownItem>
                       <MDBDropdownItem onClick={() => props.handleSelectCondition('Used-some wear and tear')}>Used-some wear and tear</MDBDropdownItem>
                     </MDBDropdownMenu>
-                  </MDBDropdown>
+                  </MDBDropdown> */}
                   
 
-
+                    <MDBCol md="6" className="text-center justify-content-center">
                   <div>
                     {/* Material inline */}
                     <MDBFormInline>
@@ -120,6 +133,8 @@ const ItemForm = (props) => {
 
                     </MDBFormInline>
                   </div>
+                    </MDBCol>
+                  </MDBRow>
 
 
 
@@ -136,7 +151,8 @@ const ItemForm = (props) => {
 
                 <div className="text-center mt-4">
                   <MDBBtn
-                    color="light-blue"
+                    rounded
+                    gradient="peach"
                     className="mb-3"
                     type="submit"
                     onClick={(event) => props.postItem(event)}

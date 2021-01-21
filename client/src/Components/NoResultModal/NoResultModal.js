@@ -17,7 +17,7 @@ class NoResultModal extends Component {
             Please return to home page.
         </MDBModalBody>
           <MDBModalFooter>
-            <MDBBtn color="secondary" href="/">Home Page</MDBBtn>
+            <MDBBtn rounded className="mb-3" gradient="peach" href="/">Home Page</MDBBtn>
            
           </MDBModalFooter>
         </MDBModal>

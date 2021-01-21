@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBAnimation  } from "mdbreact"
+import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBAnimation, MDBMask, MDBView  } from "mdbreact"
 
 
 const Footer = () => {
@@ -9,18 +9,59 @@ const Footer = () => {
         <MDBRow>
           <MDBCol md="4" className="text-center">
             <h5 className="title">Technology Used - With Lots Of Cofee</h5>
-            <img src="https://img.icons8.com/color/55/000000/javascript.png" alt="JavaCript" />
+            <MDBRow className="text-center justify-content-center">
+              
+            <MDBView hover zoom>
+            <img src="https://img.icons8.com/color/55/000000/javascript.png" alt="Javascript" />
+                <MDBMask className="flex-center" overlay="orange-strong">
+                <p className="white-text">Javascript</p>
+              </MDBMask>
+            </MDBView>
+            <MDBView hover>
             <img src="https://img.icons8.com/color/80/000000/nodejs.png" alt="Node JS"/>
+            <MDBMask className="flex-center" overlay="orange-strong">
+                <p className="white-text">Node</p>
+              </MDBMask>
+            </MDBView>
+            <MDBView hover>
             <img src="https://img.icons8.com/nolan/60/react-native.png" alt="React" />
-            
+            <MDBMask className="flex-center" overlay="orange-strong">
+                <p className="white-text">React</p>
+              </MDBMask>
+            </MDBView>
+            <MDBView hover>
             <img src="https://img.icons8.com/color/50/000000/mongodb.png" alt="Mongo DB" />
-            
+            <MDBMask className="flex-center" overlay="orange-strong">
+                <p className="white-text">Mongo</p>
+              </MDBMask>
+            </MDBView>
+            <MDBView hover>
             <img src="https://img.icons8.com/color/50/000000/npm.png" alt="NPM"/>
+            <MDBMask className="flex-center" overlay="orange-strong">
+                <p className="white-text">NPM</p>
+              </MDBMask>
+            </MDBView>
+            <MDBView hover>
             <img src="https://img.icons8.com/nolan/55/heroku.png" alt="Heroku"/>
+            <MDBMask className="flex-center" overlay="orange-strong">
+                <p className="white-text">Heroku</p>
+              </MDBMask>
+            </MDBView>
+            <MDBView hover>
             <img src="https://img.icons8.com/plasticine/65/000000/github.png" alt="GitHub" />
+            <MDBMask className="flex-center" overlay="orange-strong">
+                <p className="white-text">GitHub</p>
+              </MDBMask>
+            </MDBView>
+            <MDBView hover>
             <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="FireBase"/>
+            <MDBMask className="flex-center" overlay="orange-strong">
+                <p className="white-text">FireBase</p>
+              </MDBMask>
+            </MDBView>
 
-            
+            </MDBRow>
+
           </MDBCol> 
           <MDBCol md="4" className="text-center">
             <h5 className="title">Our Other Project</h5>
