@@ -17,7 +17,7 @@ class RegFailModal extends Component {
             Please register again.
         </MDBModalBody>
           <MDBModalFooter>
-            <MDBBtn color="secondary" href="/Register">Register</MDBBtn>
+            <MDBBtn rounded className="mb-3" gradient="peach" href="/Register">Register</MDBBtn>
 
           </MDBModalFooter>
         </MDBModal>

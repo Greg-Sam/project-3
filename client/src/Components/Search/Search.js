@@ -43,7 +43,8 @@ export default function Search() {
                   placeholder="Search" 
                   aria-label="Search"
                   onChange={handleInputChange} />
-                <MDBBtn outline color="white" 
+          <MDBBtn rounded
+            gradient="peach" 
                 size="sm" type="submit" className="mr-auto"
                   onClick={(e) => handleNavbarClick(e)}
                   // href="/Results"

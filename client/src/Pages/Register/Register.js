@@ -54,11 +54,11 @@ export default function Register() {
                   <p className="h5 text-center mb-4">Sign up</p>
                   <div className="grey-text">
                     <MDBInput
-                      className="white-text"
+                      
                       label="Your name"
                       icon="user"
                       group type="text"
-
+                      className='text-white'
                       value={inputState.name}
                       onChange={inputState.handleInputChange}
                       id="Name"
@@ -66,11 +66,11 @@ export default function Register() {
                       validate error="wrong"
                       success="right" />
                     <MDBInput
-                      className="white-text"
+                      
                       label="Your email"
                       icon="envelope"
                       group type="email"
-
+                      className='text-white'
                       value={inputState.email}
                       onChange={inputState.handleInputChange}
                       id="email"
@@ -78,7 +78,7 @@ export default function Register() {
                       validate error="wrong"
                       success="right" />
                     <MDBInput
-                      className="white-text"
+                      className='text-white'
                       label="User Name" icon="hand-point-right"
                       group type="text"
 
@@ -89,7 +89,7 @@ export default function Register() {
                       validate error="wrong"
                       success="right" />
                     <MDBInput
-                      className="white-text"
+                      className='text-white'
                       label="Your password"
                       icon="lock"
                       value={inputState.password}
@@ -104,7 +104,7 @@ export default function Register() {
                     <MDBBtn
                       type="submit"
                       color="primary"
-                      //  className={classes.submit}
+                      className="mb-3"
                       onClick={(e) => inputState.postUser(e)}
                     >Register</MDBBtn>
                   </div>

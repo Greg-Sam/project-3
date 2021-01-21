@@ -16,7 +16,7 @@ export default function NewPost() {
     description: '',
     price: '',
     category: 'Category',
-    condition: 'Condition',
+    condition: '',
     image: ''
   })
 
@@ -45,6 +45,7 @@ export default function NewPost() {
     }
     let items = Item.createItem(itemObject)
     console.log(items)
+    window.location = '/'
   }
 
   const [fileState, setFileState] = useState('')
