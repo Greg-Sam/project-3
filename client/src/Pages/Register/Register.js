@@ -1,6 +1,7 @@
 import React from "react"
 import { MDBContainer, MDBLink , MDBBtn, MDBInput, MDBBox } from 'mdbreact'
 import Navbar from '../../Components/Navbar/Navbar'
+import Footer from '../../Components/Footer/Footer'
 import Jumbotron from '../../Components/Jumbotron/Jumbotron'
 import User from '../../utils/UserAPI/UserAPI'
 import { useState } from 'react'
@@ -106,7 +107,9 @@ export default function Register() {
                 <MDBLink to='/login' className="h5 text-center mb-4 grey-text" display="flex" justifyContent="center" >Already have an accout? Log In</MDBLink>
               </MDBBox>
     </MDBContainer>
+      <Footer />
     </>
+   
     :
     <Redirect to="/login" />
     }
