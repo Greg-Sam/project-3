@@ -3,6 +3,7 @@ import { useState } from 'react'
 import User from '../../utils/UserAPI/UserAPI'
 import Navbar from '../../Components/Navbar/Navbar'
 import Jumbotron from '../../Components/Jumbotron/Jumbotron'
+import Footer from '../../Components/Footer/Footer'
 import { Redirect } from "react-router-dom"
 import { MDBContainer, MDBInput, MDBBtn, MDBBox } from 'mdbreact';
 
@@ -78,10 +79,13 @@ export default function LogIn() {
       </MDBRow> */}
       </MDBBox>
     </MDBContainer>
+     <Footer />
     </>
+    
     :
-  <Redirect to="/" />
+   <Redirect to="/" />
     }
+    
   </>
   );
 };

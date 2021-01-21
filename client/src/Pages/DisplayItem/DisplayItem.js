@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Item from '../../utils/ItemAPI/ItemAPI'
 import User from '../../utils/UserAPI/UserAPI'
 import Navbar from '../../Components/Navbar/Navbar.js'
+import Footer from '../../Components/Footer/Footer'
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardImage, MDBCardBody, MDBCardText, MDBCardTitle, MDBBtn } from "mdbreact";
 // import Axios from 'axios'
 
@@ -69,7 +70,9 @@ const DisplayItem = (props) => {
           </MDBRow>
         </MDBContainer>
         : null}
-    </>
+        <Footer />
+        </>
+    
   )
 }
 
