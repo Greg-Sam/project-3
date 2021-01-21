@@ -1,6 +1,8 @@
 require('dotenv').config()
 
 const express = require('express')
+// const bodyParser = require('body-parser')
+// const postCharge = require('stripe')
 const { join } = require('path')
 const passport = require('passport')
 const { Strategy } = require('passport-local')
@@ -8,8 +10,28 @@ const { Strategy: JWTStrategy, ExtractJwt } = require('passport-jwt')
 const { User } = require('./models')
 
 const app = express()
+// const router = express.Router()
+
+// router.post('/stripe/charge', postCharge)
+// router.all('*', (_, res) =>
+//   res.json({ message: 'please make a POST request to /stripe/charge' })
+// )
+
+// app.use((_, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*')
+//   res.header(
+//     'Access-Control-Allow-Headers',
+//     'Origin, X-Requested-With, Content-Type, Accept'
+//   )
+//   next()
+// })
+// app.use(bodyParser.json())
+// app.use('/api', router)
 
 app.use(express.static(join(__dirname, 'client', 'build')))
+// app.get('*', (_, res) => {
+//   res.sendFile(path.resolve(__dirname, '../build/index.html'))
+// })
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
@@ -31,9 +53,9 @@ passport.use(new JWTStrategy({
 app.use(require('./routes'))
 
 require('./db')
-  .then(() => app.listen(process.env.PORT || 3001))
+  .then(() => app.listen(process.env.PORT || 3002))
   .catch(err => console.log(err))
 
-// app.get('*', (req, res) => {
-//   res.sendFile(join(__dirname, 'client', 'build', 'index.html'))
-// })
+app.get('*', (req, res) => {
+  res.sendFile(join(__dirname, 'client', 'build', 'index.html'))
+})
