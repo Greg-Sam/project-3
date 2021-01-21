@@ -28,7 +28,14 @@ export default function Register() {
     }
     let users = await User.createUser(userObject)
     setInputState({...inputState, isRegistered:true})
-    console.log(users)
+    console.log(users.status)
+    // if ( === 500) 
+    // {
+    //   window.location = '/regfail'
+    // } else
+    // {
+      window.location = '/login'
+    // } 
   }
 
   inputState.handleInputChange = (event) => {
@@ -37,7 +44,7 @@ export default function Register() {
   return (
     <>
     {
-    inputState.isRegistered !== true
+    inputState.isRegistered !== "true"
     ?
     <>
     <Navbar />
