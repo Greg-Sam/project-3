@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { Item, User } = require('../models')
 
 router.get('/items/category/:category', (req, res) => {
-  Item.find({ 'category': req.params.category }).sort({ 'createdAt': -1 }).limit(6)
+  Item.find({ 'category': req.params.category }).sort({ 'createdAt': -1 })
     .then(item => res.json(item))
     .catch(err => console.log(err))
 })

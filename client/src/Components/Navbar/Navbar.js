@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import Search from '../Search/Search'
 import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
-  MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
-} from "mdbreact";
+  MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBBtn, MDBIcon} from "mdbreact";
 // import { BrowserRouter as Router} from 'react-router-dom';
 
 class Navbar extends Component {
@@ -18,14 +17,14 @@ class Navbar extends Component {
   render() {
     return (
       
-        <MDBNavbar color="unique-color-dark" dark expand="md">
+        <MDBNavbar color="special-color-dark" dark expand="md">
           <MDBNavbarBrand>
             <strong className="white-text">Seller's Remorse</strong>
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left>
-              <MDBNavItem active>
+              <MDBNavItem>
               <MDBNavLink to="/">Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>

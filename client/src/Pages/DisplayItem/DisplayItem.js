@@ -3,6 +3,8 @@ import React from "react"
 import { useEffect, useState } from 'react'
 import Item from '../../utils/ItemAPI/ItemAPI'
 import Navbar from '../../Components/Navbar/Navbar.js'
+import Jumbotron from '../../Components/Jumbotron/Jumbotron'
+import Footer from '../../Components/Footer/Footer'
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardImage, MDBCardBody, MDBCardText, MDBCardTitle, MDBBtn } from "mdbreact";
 // import Axios from 'axios'
 
@@ -42,16 +44,18 @@ const DisplayItem = (props) => {
   return (
     <>
       <Navbar />
+      <Jumbotron />
+      
       { console.log(fetchedItem) }
       {/* { console.log(userState.user) } */}
       { itemState.items.length > 0 ?
         <MDBContainer>
-          <MDBRow>
+          
             <MDBRow>
-              <MDBCol> <img src={fetchedItem.image} className="img-fluid" alt="" /></MDBCol>
-              <MDBCol><MDBCard>
+              <MDBCol md="6"> <img src={fetchedItem.image} className="img-fluid" alt="" /></MDBCol>
+              <MDBCol md="6"><MDBCard>
                 <MDBCardImage
-                  className='blue-gradient white-text d-flex justify-content-center align-items-center flex-column p-4 rounded'
+                className='stylish-color-dark  white-text d-flex justify-content-center align-items-center flex-column p-4 rounded'
                   tag='div'
                 >
                   <h2>{fetchedItem.name}</h2>
@@ -61,14 +65,16 @@ const DisplayItem = (props) => {
                 <MDBCardBody cascade className='text-center'>
                   <MDBCardTitle>${fetchedItem.price}</MDBCardTitle>
                   <MDBCardText>{fetchedItem.description}</MDBCardText>
-                  <MDBBtn color="primary" href="#">BUY</MDBBtn>
+                <MDBBtn color="mdb-color" className='whiet text' rounded href="#">BUY</MDBBtn>
                 </MDBCardBody>
               </MDBCard></MDBCol>
             </MDBRow>
-          </MDBRow>
+          
         </MDBContainer>
         : null}
-    </>
+        <Footer />
+        </>
+    
   )
 }
 

@@ -6,8 +6,10 @@ import './App.css' //Import here your file style
 
 const Contributors = () => {
   return (
+    <>
+    <Navbar />
     <MDBContainer> 
-      <Navbar />
+      
       <MDBRow>
         <MDBCol md="2">
        
@@ -83,10 +85,10 @@ const Contributors = () => {
           <hr></hr>
         </MDBCol>
         </MDBRow>
-      <Footer />
+      
     </MDBContainer>
-    
-
+    <Footer />
+    </>
   )
 }
 

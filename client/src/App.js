@@ -17,7 +17,7 @@ import Clothing from './Pages/Clothing'
 import DisplaySeller from './Pages/DisplaySeller'
 import SearchResults from './Pages/SearchResults'
 import LogOutModal from './Components/LogOutModal/LogOutModal'
-
+import RegFail from './Pages/RegFail'
 
 
 
@@ -35,9 +35,13 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          {/* <Route path="/register">
+          <Route path="/register">
             <Register />
-          </Route> */}
+          </Route>
+
+          <Route path="/regfail">
+            <RegFail />
+          </Route>
          
           <Route path="/modal">
             <LogOutModal />

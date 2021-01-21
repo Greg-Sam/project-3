@@ -1,5 +1,7 @@
 import Navbar from '../Components/Navbar/Navbar'
 import ItemForm from '../Components/ItemForm/ItemForm'
+import Jumbotron from '../Components/Jumbotron/Jumbotron'
+import Footer from '../Components/Footer/Footer'
 import { useState } from 'react'
 import Item from '../utils/ItemAPI/ItemAPI'
 import React from 'react'
@@ -68,7 +70,7 @@ export default function NewPost() {
           ?
           <>
             <Navbar />
-
+            <Jumbotron />
             <ItemForm
               handleInputChange={inputState.handleInputChange}
               postItem={inputState.postItem}
@@ -81,6 +83,7 @@ export default function NewPost() {
               handleSelectCategory={inputState.handleSelectCategory}
               handleSelectCondition={inputState.handleSelectCondition}
             />
+            <Footer />
           </>
           : <Redirect to="/login" />
       }
