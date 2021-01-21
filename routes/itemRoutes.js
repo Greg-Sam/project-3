@@ -1,25 +1,27 @@
 const router = require('express').Router()
-const { Item } = require('../models')
+const { Item, User } = require('../models')
 
-router.get('/items', (req, res) => {
-  Item.find()
-    .then(items => res.json(items))
+router.get('/items/category/:category', (req, res) => {
+  Item.find({ 'category': req.params.category }).sort({ 'createdAt': -1 }).limit(6)
+    .then(item => res.json(item))
     .catch(err => console.log(err))
 })
 
+router.get('/items/id/:id', (req, res) => {
+  Item.findById(req.params.id)
+    .then(item => res.json(item))
+    .catch(err => console.log(err))
+})
+
+
 router.get('/items/latest', (req, res) => {
-  Item.find().sort({'createdAt':-1}).limit(5)
+  Item.find().sort({'createdAt':-1}).limit(6)
     .then(items => {
      res.json(items)
     })
     .catch(err => console.log(err))
 })
 
-router.get('/items/:category', (req, res) => {
-  Item.find({'category': req.params.category})
-    .then(item => res.json(item))
-    .catch(err => console.log(err))
-})
 
 router.get('/items/search/:term', (req, res) => {
   Item.find({ $text: { $search: req.params.term } })
@@ -27,15 +29,31 @@ router.get('/items/search/:term', (req, res) => {
     .catch(err => console.log(err))
 })
 
-router.get('/items/:id', (req, res) => {
-  Item.findById(req.params.id)
-    .then(item => res.json(item))
+router.get('/items', (req, res) => {
+  Item.find()
+    .then(items => res.json(items))
     .catch(err => console.log(err))
 })
 
 router.post('/items', (req, res) => {
-  Item.create(req.body)
-    .then(item => res.json(item))
+  let itemObject = {
+    name: req.body.name,
+    description: req.body.description,
+    price: req.body.price,
+    image: req.body.image,
+    condition: req.body.condition,
+    category: req.body.category,
+    user: req.body.user
+  }
+  Item.create(itemObject)
+    .then(item => {
+      User.findByIdAndUpdate(req.body.user, {$push: {item:item._id}})
+      .then(data => {
+        res.json(data)
+      })
+      .catch(err => console.log(err))
+      })
+      
     .catch(err => console.log(err))
 })
 

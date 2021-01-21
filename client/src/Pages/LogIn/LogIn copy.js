@@ -1,4 +1,5 @@
 import React from 'react';
+import User from '../../utils/UserAPI/UserAPI'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -10,8 +11,10 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
+import { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { Redirect } from "react-router-dom"
 
 function Copyright() {
   return (
@@ -46,10 +49,37 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn() {
+export default function LogIn() {
+
+  const [inputState, setInputState] = useState({
+    username: '',
+    password: ''
+  })
+
+  inputState.loginUser = async (event) => {
+    event.preventDefault()
+    let userObject = {
+      username: inputState.username,
+      password: inputState.password
+    }
+    let {data: users} = await User.loginUser(userObject)
+    await localStorage.setItem('token', users.token)
+    await localStorage.setItem('userId', users.user)
+    await localStorage.setItem('isLoggedIn', users.isLoggedIn)
+  }
+
+  inputState.handleInputChange = (event) => {
+    setInputState({ ...inputState, [event.target.name]: event.target.value })
+  }
+
   const classes = useStyles();
 
   return (
+    localStorage.getItem("isLoggedIn") 
+    ?
+
+    <Redirect to="/"/> :
+
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -65,10 +95,12 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
+            value={inputState.username}
+            onChange={inputState.handleInputChange}
+            id="username"
+            label="username"
+            name="username"
+            autoComplete="username"
             autoFocus
           />
           <TextField
@@ -76,6 +108,8 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
+            value={inputState.email}
+            onChange={inputState.handleInputChange}
             name="password"
             label="Password"
             type="password"
@@ -92,6 +126,7 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={(e) => inputState.loginUser(e)}
           >
             Sign In
           </Button>

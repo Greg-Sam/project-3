@@ -35,6 +35,7 @@ const Showcase = () => {
           <MDBRow className="mr-0 ml-0 pl-5 pr-5">
             { itemState.items.slice(itemState.items.length - 6, itemState.items.length).reverse().map((item, i) => (
               <Card
+                id={item._id}
                 name={item.name}
                 image={item.image}
                 category={item.category}

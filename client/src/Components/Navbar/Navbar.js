@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import Search from '../Search/Search'
 import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
   MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
 } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
+// import { BrowserRouter as Router} from 'react-router-dom';
 
 class Navbar extends Component {
   state = {
@@ -16,49 +17,65 @@ class Navbar extends Component {
 
   render() {
     return (
-      <Router>
+      
         <MDBNavbar color="unique-color-dark" dark expand="md">
           <MDBNavbarBrand>
-            <strong className="white-text">Navbar</strong>
+            <strong className="white-text">Seller's Remorse</strong>
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left>
               <MDBNavItem active>
-                <MDBNavLink to="#!">Home</MDBNavLink>
+              <MDBNavLink to="/">Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="#!">Features</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="#!">Pricing</MDBNavLink>
+                <MDBNavLink to="/sell">Sell</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBDropdown>
                   <MDBDropdownToggle nav caret>
-                    <span className="mr-2">Dropdown</span>
+                    <span className="mr-2">Category</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
+                    
+                  <MDBDropdownItem href="/Electronics">Electronics</MDBDropdownItem>
+                    <MDBDropdownItem href="/Automotive">Automotive</MDBDropdownItem>
+                    <MDBDropdownItem href="/Clothing">Clothing</MDBDropdownItem>
+                    <MDBDropdownItem href="/Household">Household</MDBDropdownItem>
+                    <MDBDropdownItem href="/Pets">Pets</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
+            
             </MDBNavbarNav>
+          
             <MDBNavbarNav right>
+            {
+              localStorage.getItem("isLoggedIn") === "true"
+                ?
+              
+                <>
+            <MDBNavItem>
+              <MDBNavLink to="/logout">Logout</MDBNavLink>
+            </MDBNavItem>
+                  </>
+            :
+                <>
+            <MDBNavItem>
+              <MDBNavLink to="/login">LogIn</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="/register">Register</MDBNavLink>
+            </MDBNavItem>
+                  </>
+            }
               <MDBNavItem>
-                <MDBFormInline waves>
-                  <div className="md-form my-0">
-                    <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-                  </div>
-                </MDBFormInline>
+                <Search />
               </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
-      </Router>
+      
     );
   }
 }

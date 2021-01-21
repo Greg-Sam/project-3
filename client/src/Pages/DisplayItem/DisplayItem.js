@@ -10,26 +10,40 @@ const {
   getItems
 } = Item
 
-const DisplayItem = id => {
+// const {
+//   getUser
+// } = User
+
+const DisplayItem = (props) => {
   const [itemState, setItemState] = useState({
     isLoaded: false,
     items: []
   })
 
+  // const [userState, setUserState] = useState({
+  //   user: []
+  // })
+
   useEffect(async () => {
-    let { data: item } = await getItems('Automotive')
+    let { data: item } = await getItems()
     setItemState({ ...itemState, isLoaded: true })
     setItemState({ ...itemState, items: item })
   }, [])
 
-  let fetchItem = itemState.items.filter(item => item._id === '5fff84574f1dd816eca21d31')
+  let fetchItem = itemState.items.filter(item => item._id === props.match.params.id)
 
   let fetchedItem = fetchItem[0]
+
+  // useEffect(async () => {
+  //   let fetchedUser = await getUser(fetchedItem.user)
+  //   setUserState({ ...userState, user: fetchedUser.data })
+  // }, [])
 
   return (
     <>
       <Navbar />
       { console.log(fetchedItem) }
+      {/* { console.log(userState.user) } */}
       { itemState.items.length > 0 ?
         <MDBContainer>
           <MDBRow>
@@ -42,6 +56,7 @@ const DisplayItem = id => {
                 >
                   <h2>{fetchedItem.name}</h2>
                   <p>{fetchedItem.condition}</p>
+                  <p><a className="white-text" href={'/users/' + fetchedItem.user}>View seller info</a></p>
                 </MDBCardImage>
                 <MDBCardBody cascade className='text-center'>
                   <MDBCardTitle>${fetchedItem.price}</MDBCardTitle>
@@ -54,7 +69,6 @@ const DisplayItem = id => {
         </MDBContainer>
         : null}
     </>
-
   )
 }
 

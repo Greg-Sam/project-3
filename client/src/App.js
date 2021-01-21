@@ -2,6 +2,7 @@
 // 
 import Register from './Pages/Register/Register'
 import LogIn from './Pages/LogIn/LogIn'
+import LogOut from './Pages/LogOut'
 import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home'
@@ -10,9 +11,14 @@ import Contributors from './Pages/Contributors'
 import DisplayItem from './Pages/DisplayItem'
 import Electronics from './Pages/Electronics'
 import Automotive from './Pages/Automotive'
-import Household from './Pages/Automotive'
+import Household from './Pages/Household'
 import Pets from './Pages/Pets'
 import Clothing from './Pages/Clothing'
+import DisplaySeller from './Pages/DisplaySeller'
+import SearchResults from './Pages/SearchResults'
+import LogOutModal from './Components/LogOutModal/LogOutModal'
+
+
 
 
 import React from "react";
@@ -29,12 +35,20 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          <Route path="/register">
+          {/* <Route path="/register">
             <Register />
+          </Route> */}
+         
+          <Route path="/modal">
+            <LogOutModal />
           </Route>
 
           <Route path="/login">
             <LogIn />
+          </Route>
+
+          <Route path="/logout">
+            <LogOut />
           </Route>
 
           <Route exact path="/">
@@ -49,29 +63,50 @@ const App = () => {
             <Contributors />
           </Route>
 
-          <Route path="/displayItem">
-            <DisplayItem />
-          </Route>
+          <Route path="/items/:id" 
+            render={(props) => < DisplayItem {...props} />} 
+          /> 
 
           <Route path="/electronics">
+            <Navbar />
+            <Jumbotron />
             <Electronics />
           </Route>
 
-          <Route path="/automotive">
+        <Route exact path="/results">
+          <Navbar />
+          <Jumbotron />
+          <SearchResults />
+        </Route>
+
+
+          <Route exact path="/automotive">
+            <Navbar />
+            <Jumbotron />
             <Automotive />
           </Route>
 
-          <Route path="/pets">
+          <Route exact path="/pets">
+            <Navbar />
+            <Jumbotron />
             <Pets />
           </Route>
 
-          <Route path="/clothing">
+          <Route exact path="/clothing">
+            <Navbar />
+            <Jumbotron />
             <Clothing />
           </Route>
 
-          <Route path="/household">
+          <Route exact path="/household">
+            <Navbar />
+            <Jumbotron />
             <Household />
           </Route>
+
+          <Route path="/users/:id"
+            render={(props) => < DisplaySeller {...props} />}
+          /> 
         </Switch>
       </div>
     </Router>

@@ -1,7 +1,7 @@
 import firebase from 'firebase'
 import 'firebase/storage'
 
-export const app = firebase.initializeApp ({
+export const imageStore = firebase.initializeApp ({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "project3-a24bc.firebaseapp.com",
   databaseURL: "https://project3-a24bc-default-rtdb.firebaseio.com",

@@ -1,4 +1,6 @@
 import React from 'react';
+import User from '../../utils/UserAPI/UserAPI'
+import Navbar from '../../Components/Navbar/Navbar'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,6 +14,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { useState } from 'react'
 
 function Copyright() {
   return (
@@ -25,7 +28,6 @@ function Copyright() {
     </Typography>
   );
 }
-
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -46,11 +48,41 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SignUp() {
+
+export default function Register() {
+  const [inputState, setInputState] = useState({
+    name: '',
+    username: '',
+    email: '',
+    password: ''
+  })
+
+  inputState.postUser = async (event) => {
+    event.preventDefault()
+    console.log('ping')
+    let userObject = {
+      name: inputState.name,
+      username: inputState.username,
+      email: inputState.email,
+      password: inputState.password
+    }
+    let users = await User.createUser(userObject)
+    console.log(users)
+  }
+
+  inputState.handleInputChange = (event) => {
+    setInputState({ ...inputState, [event.target.name]: event.target.value })
+  }
+
+
+
+
+// export default function Register() {
   const classes = useStyles();
 
   return (
     <Container component="main" maxWidth="xs">
+      <Navbar />
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -63,12 +95,28 @@ export default function SignUp() {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
+                color="secondary"
                 variant="outlined"
                 required
                 fullWidth
-                id="userName"
+                value={inputState.name}
+                onChange={inputState.handleInputChange}
+                id="Name"
+                label="Name"
+                name="name"
+                autoComplete="Name"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                value={inputState.username}
+                onChange={inputState.handleInputChange}
+                id="username"
                 label="User Name"
-                name="userName"
+                name="username"
                 autoComplete="username"
               />
             </Grid>
@@ -77,6 +125,8 @@ export default function SignUp() {
                 variant="outlined"
                 required
                 fullWidth
+                value={inputState.email}
+                onChange={inputState.handleInputChange}
                 id="email"
                 label="Email Address"
                 name="email"
@@ -88,6 +138,8 @@ export default function SignUp() {
                 variant="outlined"
                 required
                 fullWidth
+                value={inputState.password}
+                onChange={inputState.handleInputChange}
                 name="password"
                 label="Password"
                 type="password"
@@ -108,6 +160,7 @@ export default function SignUp() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={(e) => inputState.postUser(e)}
           >
             Sign Up
           </Button>

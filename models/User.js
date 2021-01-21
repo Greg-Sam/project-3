@@ -15,10 +15,10 @@ const User = new Schema({
     required: true,
     unique: true
   },
-  item: {
+  item: [{
     type: Schema.Types.ObjectId,
     ref: 'Item'
-  }
+  }]
 }, { timestamps: true })
 
 User.plugin(require('passport-local-mongoose'))
