@@ -1,5 +1,5 @@
 import React from "react"
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput, MDBBox } from 'mdbreact'
+import { MDBContainer, MDBBtn, MDBInput, MDBBox } from 'mdbreact'
 import Navbar from '../../Components/Navbar/Navbar'
 import Jumbotron from '../../Components/Jumbotron/Jumbotron'
 import User from '../../utils/UserAPI/UserAPI'

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Search from '../Search/Search'
 import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
   MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
@@ -54,11 +55,7 @@ class Navbar extends Component {
             </MDBNavbarNav>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <MDBFormInline waves>
-                  <div className="md-form my-0">
-                    <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-                  </div>
-                </MDBFormInline>
+                <Search />
               </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>

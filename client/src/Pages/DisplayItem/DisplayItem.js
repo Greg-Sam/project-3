@@ -2,7 +2,6 @@
 import React from "react"
 import { useEffect, useState } from 'react'
 import Item from '../../utils/ItemAPI/ItemAPI'
-import User from '../../utils/UserAPI/UserAPI'
 import Navbar from '../../Components/Navbar/Navbar.js'
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardImage, MDBCardBody, MDBCardText, MDBCardTitle, MDBBtn } from "mdbreact";
 // import Axios from 'axios'
