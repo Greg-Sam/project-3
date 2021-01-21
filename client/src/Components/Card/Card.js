@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBCol, MDBCard, MDBCardImage, MDBCardBody } from "mdbreact";
-
+import './Card.css'
 export default function Card(props) {
   return (
     <MDBCol lg="2" md="6" className="mb-lg-0 mb-4">
@@ -10,9 +10,9 @@ export default function Card(props) {
           top
           alt={props.name}
           overlay="white-slight"
-          height="auto"
-          width="auto"
-          object-fit="scale-down"
+          height={250}
+          width={250}
+          className="imageSize"
         />
         <MDBCardBody className="elegant-color text-center">
           <a href={props.category} className="grey-text">
