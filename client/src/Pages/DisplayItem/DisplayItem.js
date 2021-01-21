@@ -2,7 +2,6 @@
 import React from "react"
 import { useEffect, useState } from 'react'
 import Item from '../../utils/ItemAPI/ItemAPI'
-// import User from '../../utils/UserAPI/UserAPI'
 import Navbar from '../../Components/Navbar/Navbar.js'
 import Jumbotron from '../../Components/Jumbotron/Jumbotron'
 import Footer from '../../Components/Footer/Footer'

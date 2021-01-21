@@ -2,6 +2,7 @@
 // 
 import Register from './Pages/Register/Register'
 import LogIn from './Pages/LogIn/LogIn'
+import LogOut from './Pages/LogOut'
 import Jumbotron from './Components/Jumbotron/Jumbotron'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home'
@@ -14,6 +15,9 @@ import Household from './Pages/Household'
 import Pets from './Pages/Pets'
 import Clothing from './Pages/Clothing'
 import DisplaySeller from './Pages/DisplaySeller'
+import Search from './Components/Search/Search'
+import SearchResults from './Pages/SearchResults'
+
 
 
 
@@ -31,12 +35,20 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          <Route path="/register">
+          {/* <Route path="/register">
             <Register />
-          </Route>
+          </Route> */}
+         
+          {/* <Route path="/results">
+            <SearchResults />
+          </Route> */}
 
           <Route path="/login">
             <LogIn />
+          </Route>
+
+          <Route path="/logout">
+            <LogOut />
           </Route>
 
           <Route exact path="/">
@@ -60,6 +72,13 @@ const App = () => {
             <Jumbotron />
             <Electronics />
           </Route>
+
+        <Route exact path="/results">
+          <Navbar />
+          <Jumbotron />
+          <SearchResults />
+        </Route>
+
 
           <Route exact path="/automotive">
             <Navbar />
