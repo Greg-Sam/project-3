@@ -14,11 +14,21 @@ export default function Home() {
       <Navbar />
       <Jumbotron />
       <Showcase />
-      <Clothing />
-      <Electronics />
-      <Automotive />
-      <Pets />
-      <Household />
+      <Clothing
+        limit="6"
+      />
+      <Electronics
+        limit="6"
+      />
+      <Automotive
+        limit="6"
+      />
+      <Pets
+        limit="6"
+      />
+      <Household
+        limit="6"
+      />
     </header>
   )
 }

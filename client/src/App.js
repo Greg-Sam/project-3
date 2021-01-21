@@ -74,12 +74,15 @@ const App = () => {
           <Route path="/electronics">
             <Navbar />
             <Jumbotron />
-            <Electronics />
+            <Electronics 
+              limit="100"
+            />
           </Route>
 
         <Route exact path="/results">
           <Navbar />
-          <Jumbotron />
+          <Jumbotron 
+          />
           <SearchResults />
         </Route>
 
@@ -87,25 +90,33 @@ const App = () => {
           <Route exact path="/automotive">
             <Navbar />
             <Jumbotron />
-            <Automotive />
+            <Automotive 
+              limit="100"
+            />
           </Route>
 
           <Route exact path="/pets">
             <Navbar />
             <Jumbotron />
-            <Pets />
+            <Pets 
+              limit="100"
+            />
           </Route>
 
           <Route exact path="/clothing">
             <Navbar />
             <Jumbotron />
-            <Clothing />
+            <Clothing 
+              limit="100"
+            />
           </Route>
 
           <Route exact path="/household">
             <Navbar />
             <Jumbotron />
-            <Household />
+            <Household 
+              limit="100"
+            />
           </Route>
 
           <Route path="/users/:id"

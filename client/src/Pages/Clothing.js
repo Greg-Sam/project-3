@@ -16,7 +16,7 @@ const {
   getCategory
 } = Item
 
-const Showcase = () => {
+const Showcase = (props) => {
   const [itemState, setItemState] = useState({
     isLoaded: false,
     items: []
@@ -90,7 +90,7 @@ const Showcase = () => {
 
 }
           <MDBRow className="mr-0 ml-0 pl-5 pr-5">
-            {itemState.items.map((item, i) => (
+            {itemState.items.slice(0, parseInt(props.limit)).map((item, i) => (
               <Card
                 id={item._id}
                 name={item.name}
