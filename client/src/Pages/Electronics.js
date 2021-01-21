@@ -66,25 +66,30 @@ const Showcase = (props) => {
           <h2 className="white-text h1-responsive font-weight-bold text-center my-2">
             Electronics
           </h2>
-          <p className="grey-text text-center w-responsive mx-auto mb-3">
-            View the most recent listings!
-          </p>
-
           {
             window.location.pathname === '/Electronics'
               ?
+              <>
+                <p className="grey-text text-center w-responsive mx-auto mb-3">
+                  View the most recent listings!
+          </p>
 
-              <MDBDropdown name="condition">
-                <MDBDropdownToggle caret color="default">
-                  Sort By
+                <MDBDropdown name="condition">
+                  <MDBDropdownToggle caret color="default">
+                    Sort By
             </MDBDropdownToggle>
-                <MDBDropdownMenu basic>
-                  <MDBDropdownItem onClick={(event) => SortPriceHiLow(event)}>Price High to Low</MDBDropdownItem>
-                  <MDBDropdownItem onClick={(event) => SortPriceLowHi(event)}>Price Low to High</MDBDropdownItem>
-                  <MDBDropdownItem onClick={(event) => SortNewest(event)}>Newest</MDBDropdownItem>
-                  <MDBDropdownItem onClick={(event) => SortOldest(event)}>Oldest</MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
+                  <MDBDropdownMenu basic>
+                    <MDBDropdownItem onClick={(event) => SortPriceHiLow(event)}>Price High to Low</MDBDropdownItem>
+                    <MDBDropdownItem onClick={(event) => SortPriceLowHi(event)}>Price Low to High</MDBDropdownItem>
+                    <MDBDropdownItem onClick={(event) => SortNewest(event)}>Newest</MDBDropdownItem>
+                    <MDBDropdownItem onClick={(event) => SortOldest(event)}>Oldest</MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </>
+              :
+              null
+
+          }
               :
               null
 

@@ -68,13 +68,14 @@ const Showcase = (props) => {
           <h2 className="white-text h1-responsive font-weight-bold text-center my-2">
             Automotive
           </h2>
-          <p className="grey-text text-center w-responsive mx-auto mb-3">
-            View the most recent listings!
-          </p>
 
           {
             window.location.pathname === '/Automotive'
               ?
+              <>
+          <p className="grey-text text-center w-responsive mx-auto mb-3">
+            View the most recent listings!
+          </p>
 
               <MDBDropdown name="condition">
                 <MDBDropdownToggle caret color="default">
@@ -87,6 +88,7 @@ const Showcase = (props) => {
                   <MDBDropdownItem onClick={(event) => SortOldest(event)}>Oldest</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
+              </>
               :
               null
 
