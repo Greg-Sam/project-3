@@ -21,8 +21,7 @@ const Item = new Schema({
     default: false
   },
   condition: {
-      type: String,
-    enum: ['New', 'New—open box', 'Used-good condition', 'Used-some wear and tear']
+      type: String
   },
   category: {
     type: String,
