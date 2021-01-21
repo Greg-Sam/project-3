@@ -6,6 +6,7 @@ import Electronics from '../Pages/Electronics'
 import Automotive from '../Pages/Automotive'
 import Pets from '../Pages/Pets'
 import Household from '../Pages/Household'
+import Footer from '../Components/Footer/Footer'
 import React from "react"
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Automotive />
       <Pets />
       <Household />
+      <Footer />
     </header>
   )
 }

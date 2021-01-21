@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { MDBRow } from "mdbreact";
 import Item from '../../utils/ItemAPI/ItemAPI'
 import Card from '../Card/Card'
+import Footer from '../../Components/Footer/Footer'
 
 const {
   getItems

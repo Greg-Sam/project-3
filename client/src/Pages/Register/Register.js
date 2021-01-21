@@ -104,7 +104,7 @@ export default function Register() {
                     <MDBBtn
                       type="submit"
                       color="primary"
-                      className="mb-3"
+                      rounded className="mb-3" gradient="peach"
                       onClick={(e) => inputState.postUser(e)}
                     >Register</MDBBtn>
                   </div>

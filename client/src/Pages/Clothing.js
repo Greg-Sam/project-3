@@ -75,7 +75,7 @@ const Showcase = () => {
         ?
 
         <MDBDropdown name="condition">
-            <MDBDropdownToggle caret color="default">
+                <MDBDropdownToggle caret color="peach-gradient" className="rounded">
               Sort By
             </MDBDropdownToggle>
             <MDBDropdownMenu basic>

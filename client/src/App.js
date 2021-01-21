@@ -18,7 +18,7 @@ import DisplaySeller from './Pages/DisplaySeller'
 import SearchResults from './Pages/SearchResults'
 import LogOutModal from './Components/LogOutModal/LogOutModal'
 import RegFail from './Pages/RegFail'
-
+import Footer from './Components/Footer/Footer'
 
 
 import React from "react";
@@ -75,12 +75,14 @@ const App = () => {
             <Navbar />
             <Jumbotron />
             <Electronics />
+            <Footer />
           </Route>
 
         <Route exact path="/results">
           <Navbar />
           <Jumbotron />
           <SearchResults />
+            <Footer />
         </Route>
 
 
@@ -88,24 +90,28 @@ const App = () => {
             <Navbar />
             <Jumbotron />
             <Automotive />
+            <Footer />
           </Route>
 
           <Route exact path="/pets">
             <Navbar />
             <Jumbotron />
             <Pets />
+            <Footer />
           </Route>
 
           <Route exact path="/clothing">
             <Navbar />
             <Jumbotron />
             <Clothing />
+            <Footer />
           </Route>
 
           <Route exact path="/household">
             <Navbar />
             <Jumbotron />
             <Household />
+            <Footer />
           </Route>
 
           <Route path="/users/:id"
