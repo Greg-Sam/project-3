@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { MDBRow } from "mdbreact";
 import Item from '../utils/ItemAPI/ItemAPI'
 import Card from '../Components/Card/Card'
+import NoResultsModal from '../Components/NoResultModal/NoResultModal'
 
 const {
   getSearched
@@ -50,7 +51,10 @@ const Showcase = () => {
             ))}
           </MDBRow>
         </section>
-        : <h1>Sorry, your search had no results</h1>}
+        : 
+        
+        <NoResultsModal />
+}
     </>
   );
 }

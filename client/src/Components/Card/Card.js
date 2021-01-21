@@ -8,7 +8,7 @@ export default function Card(props) {
         <MDBCardImage
           src={props.image}
           top
-          alt="sample photo"
+          alt={props.name}
           overlay="white-slight"
           height="auto"
           width="auto"

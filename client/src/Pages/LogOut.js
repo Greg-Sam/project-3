@@ -1,12 +1,16 @@
-import { Redirect } from 'react-router-dom'
+import LogOutModal from '../Components/LogOutModal/LogOutModal'
+
 
 const Logout = () => {
   localStorage.clear()
 
 
 return (
+
+  
   <>
-  <Redirect to='/' />
+  <LogOutModal />
+  {/* <Redirect to='/' /> */}
   </>
 )
 

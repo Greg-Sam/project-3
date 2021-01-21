@@ -15,9 +15,9 @@ import Household from './Pages/Household'
 import Pets from './Pages/Pets'
 import Clothing from './Pages/Clothing'
 import DisplaySeller from './Pages/DisplaySeller'
-import Search from './Components/Search/Search'
 import SearchResults from './Pages/SearchResults'
-
+import LogOutModal from './Components/LogOutModal/LogOutModal'
+import RegFail from './Pages/RegFail'
 
 
 
@@ -38,10 +38,14 @@ const App = () => {
           <Route path="/register">
             <Register />
           </Route>
+
+          <Route path="/regfail">
+            <RegFail />
+          </Route>
          
-          {/* <Route path="/results">
-            <SearchResults />
-          </Route> */}
+          <Route path="/modal">
+            <LogOutModal />
+          </Route>
 
           <Route path="/login">
             <LogIn />

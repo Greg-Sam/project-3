@@ -28,12 +28,6 @@ class Navbar extends Component {
               <MDBNavLink to="/">Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-              <MDBNavLink to="/login">LogIn</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="/register">Register</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
                 <MDBNavLink to="/sell">Sell</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
@@ -51,13 +45,29 @@ class Navbar extends Component {
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/logout">Log Out</MDBNavLink>
-            </MDBNavItem>
+            
             </MDBNavbarNav>
           
             <MDBNavbarNav right>
-            
+            {
+              localStorage.getItem("isLoggedIn") === "true"
+                ?
+              
+                <>
+            <MDBNavItem>
+              <MDBNavLink to="/logout">Logout</MDBNavLink>
+            </MDBNavItem>
+                  </>
+            :
+                <>
+            <MDBNavItem>
+              <MDBNavLink to="/login">LogIn</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="/register">Register</MDBNavLink>
+            </MDBNavItem>
+                  </>
+            }
               <MDBNavItem>
                 <Search />
               </MDBNavItem>
