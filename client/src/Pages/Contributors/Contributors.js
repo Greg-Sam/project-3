@@ -77,7 +77,7 @@ const Contributors = () => {
 
               <img src="https://img.icons8.com/plasticine/65/000000/github.png" alt="GitHub" />
             </a>
-            <a href="https://www.linkedin.com/in/kyle-lorenzo-46a246161/">
+            <a href="https://www.linkedin.com/in/kyle-christopher-lorenzo-46a246161">
 
               <img src="https://img.icons8.com/doodle/40/000000/linkedin--v2.png" alt="Linkedin" />
             </a>
