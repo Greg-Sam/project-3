@@ -32,7 +32,7 @@ const Contributors = () => {
             
          
           <hr></hr>
-          <h6>JavaScript, Node.js, SQL developer. Can speak three languages and has been to ten countries..Loking forward to visit many more. If I am not coding then I am reading.</h6>
+          <h6>JavaScript, Node.js, SQL developer. Can speak three languages and has been to ten countries..Looking forward to visit many more. If I am not coding then I am reading.</h6>
         </MDBCol>
         
         <MDBCol md="2">
