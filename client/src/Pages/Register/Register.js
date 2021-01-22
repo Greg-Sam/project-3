@@ -51,7 +51,7 @@ export default function Register() {
             <MDBContainer>
               <MDBBox display="flex" justifyContent="center">
                 <form>
-                  <p className="h5 text-center mb-4">Sign up</p>
+                  <p className="h5 text-center mb-4 grey-text">Sign up</p>
                   <div className="grey-text">
                     <MDBInput
                       
