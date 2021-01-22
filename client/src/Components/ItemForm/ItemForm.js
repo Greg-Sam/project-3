@@ -27,7 +27,7 @@ const ItemForm = (props) => {
           <MDBCard>
             <MDBCardBody className='stylish-color-dark'>
               <MDBCardHeader className="form-header peach-gradient rounded">
-                <h3 className="my-3 white-text">
+                <h3 className="my-3 white-text text-center">
                   <MDBIcon icon="comment-dollar" /> What are we selling today?
                 </h3>
               </MDBCardHeader>
@@ -85,7 +85,7 @@ const ItemForm = (props) => {
                   <MDBRow className="text-center">
                     <MDBCol md="6"className="text-center justify-content-center">
                   <MDBDropdown name="category" >
-                    <MDBDropdownToggle caret color="mdb-color" className="rounded">
+                        <MDBDropdownToggle caret color="peach-gradient" className="rounded">
                       {props.category}
                     </MDBDropdownToggle>
                     <MDBDropdownMenu basic >

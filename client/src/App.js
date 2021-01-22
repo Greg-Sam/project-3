@@ -18,7 +18,7 @@ import DisplaySeller from './Pages/DisplaySeller'
 import SearchResults from './Pages/SearchResults'
 import LogOutModal from './Components/LogOutModal/LogOutModal'
 import RegFail from './Pages/RegFail'
-
+import Footer from './Components/Footer/Footer'
 
 
 import React from "react";
@@ -77,6 +77,7 @@ const App = () => {
             <Electronics 
               limit="100"
             />
+            <Footer />
           </Route>
 
         <Route exact path="/results">
@@ -84,6 +85,7 @@ const App = () => {
           <Jumbotron 
           />
           <SearchResults />
+            <Footer />
         </Route>
 
 
@@ -93,6 +95,7 @@ const App = () => {
             <Automotive 
               limit="100"
             />
+            <Footer />
           </Route>
 
           <Route exact path="/pets">
@@ -101,6 +104,7 @@ const App = () => {
             <Pets 
               limit="100"
             />
+            <Footer />
           </Route>
 
           <Route exact path="/clothing">
@@ -109,6 +113,7 @@ const App = () => {
             <Clothing 
               limit="100"
             />
+            <Footer />
           </Route>
 
           <Route exact path="/household">
@@ -117,6 +122,7 @@ const App = () => {
             <Household 
               limit="100"
             />
+            <Footer />
           </Route>
 
           <Route path="/users/:id"

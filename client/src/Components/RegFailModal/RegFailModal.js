@@ -12,11 +12,11 @@ class RegFailModal extends Component {
       <MDBContainer>
 
         <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
-          <MDBModalHeader toggle={this.toggle}>Your registration failed.  Please register again.</MDBModalHeader>
-          <MDBModalBody>
+          <MDBModalHeader className='text-center stylish-color-dark text-white' toggle={this.toggle}>Your registration failed.  Please register again.</MDBModalHeader>
+          <MDBModalBody className='text-center stylish-color-dark text-white'>
             Please register again.
         </MDBModalBody>
-          <MDBModalFooter>
+          <MDBModalFooter className='justify-content-center stylish-color-dark text-white'>
             <MDBBtn rounded className="mb-3" gradient="peach" href="/Register">Register</MDBBtn>
 
           </MDBModalFooter>

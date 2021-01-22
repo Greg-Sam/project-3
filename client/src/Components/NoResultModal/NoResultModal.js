@@ -12,11 +12,11 @@ class NoResultModal extends Component {
       <MDBContainer>
 
         <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
-          <MDBModalHeader toggle={this.toggle}>Your search returned no results</MDBModalHeader>
-          <MDBModalBody>
+          <MDBModalHeader className='justify-content-center stylish-color-dark text-white'  toggle={this.toggle}>Your search returned no results</MDBModalHeader>
+          <MDBModalBody className='text-center stylish-color-dark text-white'>
             Please return to home page.
         </MDBModalBody>
-          <MDBModalFooter>
+          <MDBModalFooter className='justify-content-center stylish-color-dark text-white'>
             <MDBBtn rounded className="mb-3" gradient="peach" href="/">Home Page</MDBBtn>
            
           </MDBModalFooter>

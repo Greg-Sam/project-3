@@ -74,9 +74,9 @@ const Showcase = (props) => {
                   View the most recent listings!
           </p>
 
-                <MDBDropdown name="condition">
-                  <MDBDropdownToggle caret color="default">
-                    Sort By
+              <MDBDropdown name="condition">
+                <MDBDropdownToggle caret color="peach-gradient" className="rounded">
+                  Sort By
             </MDBDropdownToggle>
                   <MDBDropdownMenu basic>
                     <MDBDropdownItem onClick={(event) => SortPriceHiLow(event)}>Price High to Low</MDBDropdownItem>
