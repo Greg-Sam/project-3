@@ -34,6 +34,6 @@ require('./db')
   .then(() => app.listen(process.env.PORT || 3001))
   .catch(err => console.log(err))
 
-// app.get('*', (req, res) => {
-//   res.sendFile(join(__dirname, 'client', 'build', 'index.html'))
-// })
+app.get('*', (req, res) => {
+  res.sendFile(join(__dirname, 'client', 'build', 'index.html'))
+})
