@@ -11,7 +11,7 @@
   [Testing procedure](#testing-procedure)  
   [Questions](#questions)  
   ## Instalation instructions
-  This is a webapp that doesn't require any instalation.  Just visit https://hidden-meadow-28850.herokuapp.com/ to get started.  
+  This is a webapp that doesn't require any instalation.  Just visit   https://evening-reef-86897.herokuapp.com/ to get started.  
   ## Usage description
   Browse the items that are on the site and click the 'buy' button if you see anything you want.  Make sure you have your credit card ready.  If you would like to sell your stuff on the site, create a user acount and login. Then navigate to the sell page and enter all the details about your item and then wait for money to start pouring into your bank account.    
   ## License information
