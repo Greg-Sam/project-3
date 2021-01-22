@@ -121,7 +121,7 @@ const ItemForm = (props) => {
 
                       <h5 className="mt-2">Select Image File   </h5>
                       <input
-                      className="pl-2"
+                            className="pl-2  text-truncate"
                         type='file'
                         label="Image link"
                         icon="medkit"
