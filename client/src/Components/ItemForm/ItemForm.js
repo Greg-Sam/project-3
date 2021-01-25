@@ -36,6 +36,7 @@ const ItemForm = (props) => {
                   <MDBInput
                     className='text-white'
                     label="Item name"
+                    maxlength='25'
                     icon="frog"
                     group
                     name="name"
