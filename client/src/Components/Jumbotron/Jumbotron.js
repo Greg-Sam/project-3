@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBJumbotron, MDBContainer, MDBCol, MDBCardTitle } from "mdbreact";
-import './Jumbotron.css'
+// import './Jumbotron.css'
 
 const Jumbotron = () => {
   return (
