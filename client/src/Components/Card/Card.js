@@ -5,6 +5,7 @@ export default function Card(props) {
   return (
     <MDBCol lg="2" md="6" className="mb-lg-0 mb-4">
       <MDBCard className="align-items-center elegant-color" id={props.id}>
+        <a href={'/items/' + props.id} >
         <MDBCardImage
           src={props.image}
           top
@@ -14,6 +15,7 @@ export default function Card(props) {
           width={250}
           className="imageSize"
         />
+        </a>
         <MDBCardBody className="elegant-color text-center">
           <a href={props.category} className="grey-text">
             <h5>{props.category}</h5>
